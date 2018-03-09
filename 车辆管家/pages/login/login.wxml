@@ -1,0 +1,6 @@
+<view class='backgroundimage'>
+  <view class='buttonview'>
+    <button class="authorized-login" open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber' >微信授权登录</button>
+    <button class='nomal-login' bindtap='tophonelogin'>手机号登录</button>
+  </view>
+</view>
