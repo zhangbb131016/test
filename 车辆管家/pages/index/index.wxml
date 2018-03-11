@@ -1,1 +1,0 @@
-<button class="toNext" bindtap='tologin'>触发登录</button>

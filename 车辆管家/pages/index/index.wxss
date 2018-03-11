@@ -1,7 +1,0 @@
-.toNext
-{
-  height: 40px;
-  line-height: 40px;
-  background-color: palegreen;
-  color: white;
-}
