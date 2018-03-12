@@ -1,0 +1,345 @@
+/**app.wxss**/
+/**公共样式**/
+  page{width: 100%;height: 100%;font-family: "微软雅黑";overflow-x: hidden;} 
+ page,view,input,text,icon,radio,navigator,image{padding: 0;margin: 0;}  
+ul,li{list-style: none;}
+a{text-decoration: none;outline: none;}
+i{font-style: normal;}
+button{cursor: pointer;border: 0;outline: none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+input,textarea{outline: 0;border: 0;background: transparent;font-family: "微软雅黑";
+ -webkit-tap-highlight-color:rgba(0,0,0,0)}
+/*车辆管家*/
+.clgj{width: 100%;min-height: 100%;float: left;background: #90dfff;overflow: hidden;}
+.clgj_top{width: 100%;float: left;background: #65d4ff;position: relative;}
+.clgj_top image{height: 100%;}
+/*建筑剪影*/
+.clgj_top .jzjy{width: 100%;height: 220rpx;position: relative;left: 0;top: 0;overflow: hidden;}
+.clgj_top .jzjy image{position: relative;left: 0;animation:jzjyAn 12s linear 4s infinite;}   
+@keyframes jzjyAn{
+	from{
+		left: 0;
+	}
+	to{
+		left: -400rpx;
+	}
+}
+/*云1*/
+.clgj_top .cloud1{height:40rpx;position: absolute;right: 120rpx;top: 90rpx;
+   animation:cloud1An 60s linear infinite;}
+@keyframes cloud1An{
+	from{
+		right: 120rpx;
+	}
+	to{
+		right: 1500rpx;
+	}
+}
+/*云2*/
+.clgj_top .cloud2{height: 52rpx;position: absolute;right: 20rpx;top: 20rpx;
+   animation:cloud2An 60s linear infinite;}
+  @keyframes cloud2An{
+	from{
+		right: 20rpx;
+	}
+	to{
+		right: 1000rpx;
+	}
+} 
+.clgj_top .cloud3{width:100rpx;position: absolute;right: -400rpx;top: 80rpx; 
+animation:cloud3An 60s linear;}
+.clgj_top .cloud3 image{width: 100%;}
+ @keyframes cloud3An{
+	from{
+		right: -440rpx;
+	}
+	to{
+		right: 800rpx;
+	}
+} 
+/*大路*/
+.clgj_top .road{width: 100%;height: 100rpx;position: relative;left: 0;top: 0;overflow: hidden;}
+.clgj_top .road image{animation:roadAn 12s linear 4s infinite;position: relative;left: 0;}
+@keyframes roadAn{
+	from{
+		left: 0;
+	}
+	to{
+		left: -1400rpx;
+	}
+}
+/*车*/
+.clgj_top .car{height: 52rpx;position: absolute;left: 190rpx;bottom: 36rpx;z-index: 2;}
+/*房子1*/
+.clgj_top .home1{height: 180rpx;position: absolute;left: 36rpx;top: 70rpx;z-index: 1;
+  animation:home1An 12s linear 4s infinite;}
+@keyframes home1An{
+	from{
+		left: 36rpx;
+	}
+	to{
+		left: -1364rpx;
+	}
+}
+/*房子2*/
+.clgj_top .home2{height: 92rpx;position: absolute;left: 580rpx;top: 146rpx;z-index: 1;
+  animation:home2An 12s linear 4s infinite;}
+  @keyframes home2An{
+	from{
+		left: 580rpx;
+	}
+	to{
+		left: -820rpx;
+	}
+}
+/*风车*/
+.clgj_top .windmill{width:128rpx;position: absolute;left: 300rpx;top: 84rpx;z-index: 1;
+  animation:windmillAn 12s linear 4s infinite;}
+@keyframes windmillAn{
+	from{
+		left: 300rpx;
+	}
+	to{
+		left: -1120rpx;
+	}
+} 
+.clgj_top .windmill_top{width: 128rpx;height: 128rpx;position: relative;z-index: 2; animation: windmilltopAn  15s linear infinite;}
+ @keyframes windmilltopAn {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+.clgj_top .windmill_top image{width: 100%;height: 100%;}
+.clgj_top .windmill .line{width: 4rpx;height: 80rpx;float: left;position: relative;left: 50%;top: -64rpx; margin-left: -2rpx;background: #e5e5e5;overflow: hidden;}
+.clgj_top .windmill .line .span1{width: 2rpx;height: 100%;float: left;background: #e5e5e5;}
+.clgj_top .windmill .line .span1:last-child{background: #fff;}
+/*风车2 */
+.clgj_top .windmill2{left: 990rpx;animation:windmill2An 12s linear 4s infinite;}
+@keyframes windmill2An{
+	from{
+		left: 990rpx;
+	}
+	to{
+		left: -410rpx;
+	}
+}
+/*路灯*/
+.clgj_top .lamp{height: 64rpx;position: absolute;left: 500rpx;top: 186rpx;z-index: 1;
+ animation:lampAn 12s linear 4s infinite;}
+ @keyframes lampAn{
+	from{
+		left: 500rpx;
+	}
+	to{
+		left: -900rpx;
+	}
+} 
+.clgj_top .lamp .red{width: 8rpx;height: 8rpx;position: absolute;left: 10rpx;top: 2rpx; background: #96290e;border-radius: 100%;
+   animation:redAn 14s linear;}
+@keyframes redAn{
+	0%{
+		background: #ff0000;box-shadow: 0 0 20rpx #ff0000;
+	}
+	10%{
+		background: #ff0000;box-shadow: 0 0 20rpx #ff0000;
+	}
+	11%{
+		background: #96290e;box-shadow: 0 0 0 #96290e;
+	}
+	100%{
+		background: #96290e;box-shadow: 0 0 0 #96290e;
+	}
+}   
+.clgj_top .lamp .yellow{width: 8rpx;height: 8rpx;position: absolute;left: 10rpx;top: 11rpx; background: #b5a50f;border-radius: 100%;
+  animation:yellowAn 14s linear;}
+ @keyframes yellowAn{
+	0%{
+		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
+	}
+	14%{
+		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
+	}
+	15%{
+		background: #ffe600;box-shadow: 0 0 10px #ffe600;
+	}
+	20%{
+		background: #ffe600;box-shadow: 0 0 10px #ffe600;
+	}	
+	23%{
+		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
+	}
+	100%{
+		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
+	}
+}    
+.clgj_top .lamp .green{width: 8rpx;height: 8rpx;position: absolute;left: 10rpx;top: 20rpx; background: #6fff00;border-radius: 100%;
+   animation:greenAn 14s linear;}
+@keyframes greenAn{
+	0%{
+		background: #569128;box-shadow: 0 0 0 #569128;
+	}
+	25%{
+		background: #569128;box-shadow: 0 0 0 #569128;
+	}
+	26%{
+		background: #6fff00;box-shadow: 0 0 0 #6fff00;
+	}	
+	100%{
+		background: #6fff00;box-shadow: 0 0 0 #6fff00;
+	}
+}    
+/*风景*/
+.clgj_top .scenery{height: 240rpx;position: absolute;left: 720rpx;top: 70rpx;z-index: 1;
+  animation:sceneryAn 12s linear 4s infinite;}
+  @keyframes sceneryAn{
+	from{
+		left: 760rpx;
+	}
+	to{
+		left: -640rpx;
+	}
+}
+/*波纹*/
+.ripple{width: 100%;height: 84rpx;float: left;position: relative;overflow: hidden;background: #00b1f9;}
+.ripple image{height: 100%;}
+.ripple_bg{height: 70rpx;position: absolute;left: 0;top: 0;z-index: 1;
+    animation:ripplebgAn 12s linear 4s infinite;}
+@keyframes ripplebgAn{
+	from{
+		left: 0;
+	}
+	to{
+		left: -1400rpx;
+	}
+}
+.ripple1{height: 80rpx;position: absolute;left: 0;bottom: 0;z-index: 3;transform-origin:center bottom;
+   animation: ripple1An 7s linear infinite;}
+  @keyframes ripple1An {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+     50% {
+        transform: translateX(-25%) translateZ(0rem) scaleY(0.9)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}    
+.ripple2{height: 80rpx;position: absolute;left: 0;bottom: 0;z-index: 4;transform-origin:center bottom;
+   animation: ripple2An 7s linear infinite;}
+@keyframes ripple2An {
+     
+   0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+     50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.9)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}  
+ /*车辆管家-main  */
+.clgj_main{width: 100%;float: left;position: relative;top: -50rpx;z-index: 10;padding: 0 40rpx 90rpx;box-sizing: border-box;}
+.clgj_main_top{width: 100%;float: left;padding: 0 30rpx;box-sizing: border-box;border-left: 2px solid #00a6e8;border-radius: 4px;box-shadow: 0 0 10rpx #b9c4fc;background: #fff;margin-bottom: 20rpx;}
+.clgj_main_top .black1{width: 100%;float: left;position: relative;padding: 16rpx 0;}
+.clgj_main_top .black1 .row{width: 100%;line-height: 48rpx;float: left;margin: 8rpx 0;}    
+.clgj_main_top .black1 .row.row1{text-align: center;color: #888;font-size: 30rpx;margin: 2rpx 0;}
+.clgj_main_top .black1 .row .text_big{float: left;color: #000;font-size: 36rpx;}    
+.clgj_main_top .black1 .row .xiugai{width: 36rpx;height: 36rpx;float: right;margin-top: 4rpx;}    
+.clgj_main_top .black1 .row .name_icon{width: 26rpx;height: 26rpx;float: left;margin: 12rpx 10rpx 0 0;}   
+.clgj_main_top .black1 .row .text_gray{ color: #999;font-size: 30rpx;}    
+.clgj_main_top .black1 .row.row1 .row_lf{float: left;}
+.clgj_main_top .black1 .row.row1 .row_rt{float: right;}
+.clgj_main_top .black1 .row.row1 .span_red{color: #ff0000;padding: 0 10rpx;}
+.clgj_main_top .black1 .line{width: 100%;float: left;position: relative;margin: 10rpx 0 12rpx;}
+.clgj_main_top .black1 .line::after{position: absolute;right: 0;bottom: 0;left: 0;height: 2rpx;
+    content: '';-webkit-transform: scaleY(.5);transform: scaleY(.5);background-color: #808080;}
+.clgj_main_add{width: 100%;float: left;padding: 16rpx 20rpx;margin-bottom: 20rpx;background: #e1f7ff;border-radius: 5px;border: 2rpx dashed #0068b7;box-sizing: border-box;}
+.clgj_main_add .img_add{width: 100%;height: 64rpx;float: left;margin: 12rpx 0 16rpx;text-align: center;}
+.clgj_main_add .img_add image{width: 64rpx;height: 64rpx;} 
+.clgj_main_add .text_add{width: 100%;line-height: 44rpx;float: left;margin: 6rpx 0;text-align: center;}
+.clgj_main_add .text_add1{font-size: 32rpx;color: #000;}
+.clgj_main_add .text_add2{font-size: 28rpx;color: #688aa4;margin: 4rpx 0 6rpx;}
+/*车辆管家- footer  */
+.clgj_footer{width: 100%;height: 94rpx;position: fixed;bottom: 0;left: 0;background: #fff;z-index: 10;}
+.clgj_footer navigator{width: 33%;height: 100%;float: left;box-sizing: border-box;position: relative;}
+.clgj_footer navigator::after{position: absolute;right: 0;top: 0;left: 0;height: 1px;
+    content: '';-webkit-transform: scaleY(.5);transform: scaleY(.5);background-color: #efefef;}
+.clgj_footer navigator.li_hov::after{height: 0;}
+.clgj_footer navigator.li_hov{border-top: 2rpx solid #0068b7;}
+.clgj_footer navigator:nth-of-type(2n){width: 34%;}
+.clgj_footer navigator .icon{width: 100%;float: left;margin-top: 6rpx;text-align: center;}
+.clgj_footer navigator .icon image{width: 50rpx;height: 50rpx;}
+.clgj_footer navigator text{width: 100%;float: left;margin-top: -12rpx;text-align: center;color: #333;font-size: 22rpx;}
+/*登录页面*/
+.logon{width: 100%;height: 100%;float: left;overflow: hidden;}
+   /*top*/
+.logon_top{width: 100%;float: left;position: relative;z-index: 1;}
+.logon_top .imgbg{width: 100%;height:320rpx;position: relative;left: 0;top: 0;z-index: 1;} 
+.logon_top .logon_top_main{width: 100%;height: 88rpx;position: absolute;bottom: 0;z-index: 2;}
+.logon_top .logon_ripple1{width: 100%;height: 88rpx;float: left; position: relative;left: 0;bottom: 0;z-index: 1;text-align: center;}
+.logon_top .logon_ripple1 image{height: 100%;animation: logon_ripple1An 2s linear infinite;transform-origin:left top;}
+.logon_top .logon_ripple2{width: 100%;height: 77rpx;position: absolute;left: 10%;bottom: 11rpx;z-index: 2;
+    text-align: center;}
+.logon_top .logon_ripple2 image{height: 100%;animation: logon_ripple1An 2s linear infinite;transform-origin:left top;}
+ @keyframes logon_ripple1An {
+    0% {
+        transform: translateX(0rem) translateZ(0) scaleY(1)
+    }
+     50% {
+        transform: translateX(-17%) translateZ(0) scaleY(1)
+    }
+    100% {
+        transform: translateX(-34%) translateZ(0) scaleY(1)
+    }
+}    
+  /*main*/
+.logon_main_w{width: 100%;float: left;padding: 0 60rpx;box-sizing: border-box;position: relative;}
+.logon_main_w::before{content: '';height: 2rpx;position: absolute;left: 0;right: 0;top: 0;background: #c7d7fd;-webkit-transform: scaleY(.5);transform: scaleY(.5);}
+.logon_main{width: 100%;float: left;}
+.logon_main .logon_ul{width: 100%;float: left;margin-top: 16px;}
+.logon_main .logon_ul .logon_ul_li{width: 100%;height: 100rpx;line-height: 100rpx;float: left;position: relative;color: #333;}
+.logon_main .logon_ul .logon_ul_li::after{position: absolute;right: 0;bottom: 0;left: 0;height: 2rpx;
+    content: '';-webkit-transform: scaleY(.5);transform: scaleY(.5);background-color: #e1e2e5;}
+.logon_main .logon_ul .logon_ul_li .li_lf{width: 26rpx;height: 100%;float: left;margin-left: 20rpx;}
+.logon_main .logon_ul .logon_ul_li .li_lf1{width: 24rpx;}
+.logon_main .logon_ul .logon_ul_li .li_lf image{width: 100%;vertical-align: middle;}
+.logon_main .logon_ul .logon_ul_li .li_rt{padding-left: 64rpx;}
+.logon_main .logon_ul .logon_ul_li .li_rt input{width: 100%;height: 40rpx;line-height: 40rpx;float: left;margin-top: 32rpx;font-size: 32rpx;}
+.logon_main .logon_ul .logon_ul_li .li_yzm{height: 36rpx;line-height: 36rpx;float: right;margin-top: 40rpx;font-size: 32rpx;border-left: 1rpx solid #ccc;padding-left: 20rpx;color: #ccc;}
+.logon_main .logon_ul .logon_ul_li.li_yzm_w .li_rt{padding: 0 240rpx 0 64rpx;}
+.logon_main .logon_row{width: 100%;line-height: 40rpx;float: left;margin: 30rpx 0;font-size: 24rpx;}
+.logon_main .logon_row .a1{float: left;color: #5990f4;}
+.logon_main .logon_row .a2{float: right;color: #333;}
+.logon_main .logon_btn{width: 100%;float: left;margin-top: 80rpx;padding: 8rpx 0;font-size: 30rpx;text-align: center;color: #fff;border-radius: 5px;background: #5990f4;}
+.logon_main .logon_btn:active{background: #4783f0;}
+.logon_main .ul_bottom{width: 100%;position: fixed;bottom: 24rpx;left: 0;}
+.logon_main .ul_bottom .ul_bottom_li{width: 32%;float: left;margin-bottom: 50rpx;}
+.logon_main .ul_bottom .ul_bottom_li:nth-of-type(2n){margin: 0 2%;}
+.logon_main .ul_bottom .ul_bottom_li .li_top{width: 100%;height: 40rpx;float: left;text-align: center;}
+.logon_main .ul_bottom .ul_bottom_li .li_top image{width: 40rpx;}
+.logon_main .ul_bottom .ul_bottom_li .li_text_big{width: 100%;float: left;text-align: center;font-size: 26rpx;color: #626365;padding: 10rpx 0 0;}
+.logon_main .ul_bottom .ul_bottom_li .li_text_small{width: 100%;float: left;text-align: center;font-size: 22rpx;color: #a7adbb;}
+
+       /*违法驾照  */
+.clgj_main_top .black1.black2 .row{margin: 12rpx 0;}
+.clgj_main_top .black1.black2 .row .xiugai{width: 40rpx;height: 40rpx;margin-top: 6rpx;}  
+.clgj_main_top .black1.black2 .row .name_icon{width: 30rpx;height: 30rpx;margin: 12rpx 10rpx 0 0;}   
+    /*违法驾照结束 */
+
+/*个人中心  */
+.grzx{background: #f5f7fa;}
+.grzx_top{width: 100%;position: absolute;top: 0;left: 0;z-index: 3;}
+.grzx_head{width: 140rpx;height: 140rpx;background: #fff;border-radius: 100%;position: relative;left: 50%;top: 30rpx;margin-left: -70rpx;border: 6rpx solid #fff;}
+.grzx_text{width: 100%;float: left;padding: 10rpx;margin-top:25rpx;text-align: center;color: #fff;font-size: 36rpx;}
+.grzx_main{width: 100%;float: left;padding: 0 0 0 50rpx;box-sizing: border-box;position: relative;background: #fff;}
+.grzx_main::before{content: '';height: 4rpx;position: absolute;left: 0;right: 0;top: 0;background: #e1e2e5;-webkit-transform: scaleY(.5);transform: scaleY(.5);}
+.grzx_main .grzx_ul{width: 100%;float: left;}
+.grzx_main .grzx_ul .li1{width: 100%;height: 100rpx;line-height: 100rpx;float: left;position: relative;}
+.grzx_main .grzx_ul .li1::after{content: '';left: 0;right: 0;bottom: 0;height: 2rpx;position: absolute;transform: scaleY(.5);background: #e1e2e5;}
+.grzx_main .grzx_ul .li1_lf{width: 40%;height: 100%;float: left;color: #323232;font-size: 32rpx;}
+.grzx_main .grzx_ul .li1_lf image{width: 32rpx;float: left;margin: 34rpx 13rpx 0 0;}
+.grzx_main .grzx_ul .li1_rt{height: 100%;float: right;margin-right: 50rpx;color: #000;font-size: 32rpx;text-align: right;}

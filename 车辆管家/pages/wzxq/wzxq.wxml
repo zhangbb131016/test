@@ -1,0 +1,55 @@
+<import src='/pages/component/header.wxml'/>
+<import src='/pages/component/footer.wxml'/>
+<view class="clgj">
+  <!--header  -->
+  <template is="header"/>
+  <!--mian  -->
+  <view class='clgj_main'>
+      <view class='clgj_main_top'>
+         <view class='black1'>
+            <view class='row'>
+               <text class='text_big'>吉A215V9</text>
+               <image mode='widthFix' src='/images/xiugai.png' class='xiugai'></image>
+            </view>
+            <view class='row'>
+               <image mode='widthFix' src='/images/name.png' class='name_icon'></image>
+               <text class='text_gray'>车主姓名：雷自刚</text>
+            </view>
+            <view class='line'></view>
+            <view class='row row1'>
+               <view class='row_lf'>扣分<text class='span_red'>3</text>分</view>
+               罚款<text class='span_red'>50</text>元
+               <view class='row_rt'>未处理<text class='span_red'>1</text>次</view>
+            </view>
+         </view>
+      </view>
+     <view class='wzxq_block'>
+        <view class='wzxq_block_top'>
+        <view class='lf_bg'>
+          <image mode='widthFix' src='/images/wzxq_icon3.png'></image>
+        </view>
+           <view class='row'>
+              2018-02-12 09:15:45
+              <text class='red'>未处理</text>
+           </view>
+       
+        <text class='text_big'>亚泰大街-东四道街</text>
+        <text class='text_smaill'>机动车违反规定停放、临时停放妨碍其他车辆、行人通行的，驾驶人不在行</text>
+    </view>
+     <view class='wzxq_block_bootom'>
+         <view class='lf'>
+            <image mode='widthFix' src='/images/wzxq_icon1.png'></image>
+            扣分<text class='red'>3</text>分
+         </view>
+         <view class='ct'>
+             <image mode='widthFix' src='/images/wzxq_icon2.png'></image>
+               罚款<text class='red'>50</text>元
+          </view>
+       <view class='rt'>接受处理</view>
+     </view>
+     </view>
+    
+  </view>
+  <!--footer  -->
+  <template is="footer"/>
+</view>

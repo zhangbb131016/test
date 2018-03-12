@@ -1,0 +1,63 @@
+<view class="logon">
+			<view class="logon_top">
+        <image mode='aspectFill' src='/images/logon_bg.png' class='imgbg'></image> 
+        <view class='logon_top_main'>
+					 <view class="logon_ripple1">
+            <image mode='widthFix' src="/images/logon_ripple1.png" style='width:3237rpx'></image>
+					</view>
+					<view class="logon_ripple2">
+            <image mode='widthFix' src="/images/logon_ripple2.png" style='width:3237rpx'></image>
+					</view> 
+          </view>
+			</view>
+			<view class="logon_main_w">
+				<view class="logon_main">
+					<view class="logon_ul">
+						<view class='logon_ul_li li_yzm_w'>
+							<view class="li_lf li_lf1">
+                  <image mode='widthFix' src="/images/phone.png" class="img1"></image>
+							</view>
+							<view class="li_rt">
+								<input type="text" placeholder="请输入手机号码" />
+							</view>
+              	<view class="li_yzm">获取验证码</view>
+						</view>
+						<view class='logon_ul_li'>
+							<view class="li_lf">
+                 <image mode='widthFix' src="/images/password.png"></image>
+							</view>
+							<view class="li_rt">
+								<input type="text" placeholder="请输入验证码" />
+							</view>
+						</view>
+					</view>
+					<!-- <view class="logon_row">
+            	<navigator url='' class="a2">忘记密码？</navigator> 
+					</view> -->
+					<button type="button" class="logon_btn">登录</button>
+					<view class="ul_bottom">
+						<view class='ul_bottom_li'>
+							<view class="li_top">
+                 <image mode='widthFix' src="/images/logon_iconli1.png"></image>
+							</view>
+							<view class="li_text_big">精准</view>
+							<view class="li_text_small">官方数据自连</view>
+						</view>
+						<view class='ul_bottom_li'>
+							<view class="li_top">
+                  <image mode='widthFix' src="/images/logon_iconli2.png"></image>
+							</view>
+							<view class="li_text_big">安全</view>
+							<view class="li_text_small">官方合作办理</view>
+						</view>
+						<view class='ul_bottom_li'>
+							<view class="li_top">
+                <image mode='widthFix' src="/images/logon_iconli1.png"></image>
+							</view>
+							<view class="li_text_big">快速</view>
+							<view class="li_text_small">专业办理渠道</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>

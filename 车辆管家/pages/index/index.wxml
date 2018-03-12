@@ -1,0 +1,36 @@
+<import src='/pages/component/header.wxml'/>
+<import src='/pages/component/footer.wxml'/>
+<view class="clgj">
+  <!--header  -->
+  <template is="header"/>
+  <!--mian  -->
+  <view class='clgj_main'>
+      <view class='clgj_main_top' wx:for="{{carList}}">
+         <view class='black1'>
+            <view class='row'>
+               <text class='text_big'>{{item.hphm}}</text>
+               <image mode='widthFix' src='/images/xiugai.png' class='xiugai'></image>
+            </view>
+            <view class='row'>
+               <image mode='widthFix' src='/images/name.png' class='name_icon'></image>
+               <text class='text_gray'>车主姓名：{{item.realName}}</text>
+            </view>
+            <view class='line'></view>
+            <view class='row row1'>
+               <view class='row_lf'>扣分<text class='span_red'>{{item.totalKf}}</text>分</view>
+               罚款<text class='span_red'>{{item.totalfk}}</text>元
+               <view class='row_rt'>未处理<text class='span_red'>{{item.totalCount}}</text>次</view>
+            </view>
+         </view>
+      </view>
+ <view class='clgj_main_add' wx:if="{{carList}}>3" bindtap="addCar">
+    <view class='img_add'>
+      <image mode='widthFix' src='/images/add.png'></image>
+    </view>
+     <view class='text_add text_add1'>添加车辆查违章</view>
+     <view class='text_add text_add2'>享受新违章通知、在线办理违章、缴费等服务</view>
+ </view>
+  </view>
+  <!--footer  -->
+  <template is="footer"/>
+</view>

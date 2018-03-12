@@ -1,0 +1,22 @@
+<!-- <template name="footer">
+<view class='clgj_footer'>
+     <navigator  class='li_hov'  bindtap='tabChange' url='/pages/index/index' open-type='redirect'>
+        <view class='icon'>
+            <image mode='widthFix' src="/images/footer_icon1.png"></image>
+        </view>
+        <text>车辆违法</text>
+     </navigator>
+      <navigator bindtap='tabChange' url='/pages/jzwf/jzwf' open-type='redirect'>
+        <view class='icon'>
+            <image mode='widthFix' src="/images/footer_icon2.png"></image>
+        </view>
+        <text>驾照违法</text>
+     </navigator>
+      <navigator bindtap='tabChange' url='/pages/index/index' open-type='redirect'>
+        <view class='icon'>
+            <image mode='widthFix' src="/images/footer_icon3.png"></image>
+        </view>
+        <text>我的</text>
+     </navigator>
+  </view>
+</template> -->

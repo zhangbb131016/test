@@ -1,0 +1,31 @@
+page{height:100%}
+.clgj_main_top .text_jcbd{float: right;padding: 5rpx 20rpx;color: #fff;font-size: 24rpx;background: #ff5252;border-radius: 30rpx;margin-top: -2rpx;}
+.user_detail {
+  width: 100%;
+  float: left;
+  background: #fff;
+ box-shadow: 0 0 10rpx #b9c4fc;
+ border-radius: 4px;
+ padding: 12rpx 0;
+}
+.detail_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16rpx 30rpx
+}
+.list_key {
+  text-align: left;
+  color: #989898;
+  font-size: 30rpx
+}
+.list_value {
+  text-align: right;
+  font-size: 30rpx
+}
+.normal {
+  color: #64AEFB
+}
+.red {
+  color: #E82538
+}

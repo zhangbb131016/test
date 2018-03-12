@@ -1,0 +1,88 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx201f5fda80c1876b",
+	"projectname": "%E8%BD%A6%E8%BE%86%E7%AE%A1%E5%AE%B6app",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "jzadd",
+					"pathName": "pages/jzadd/jzadd",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "jzwf",
+					"pathName": "pages/jzwf/jzwf",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "jzxq",
+					"pathName": "pages/jzxq/jzxq",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "caradd",
+					"pathName": "pages/caradd/caradd",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personal",
+					"pathName": "pages/personal/personal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "wzxq",
+					"pathName": "pages/wzxq/wzxq",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "loginmode",
+					"pathName": "pages/loginmode/loginmode",
+					"query": ""
+				}
+			]
+		}
+	}
+}

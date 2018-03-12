@@ -1,0 +1,45 @@
+<view class="logon grzx">
+			<view class="logon_top">
+        <image mode='aspectFill' src='/images/logon_bg.png' class='imgbg'></image> 
+        <view class='grzx_top'>
+         <image mode='widthFix' src='/images/head.png' class='grzx_head'></image> 
+         <text class='grzx_text'>156****2288</text>
+         </view>
+        <view class='logon_top_main'>
+					 <view class="logon_ripple1">
+            <image mode='widthFix' src="/images/logon_ripple1.png" style='width:3237rpx'></image>
+					</view>
+					<view class="logon_ripple2">
+            <image mode='widthFix' src="/images/logon_ripple2.png" style='width:3237rpx'></image>
+					</view> 
+          </view>
+			</view>
+      <view class='grzx_main'>
+         <view class='grzx_ul'>
+            <view class='li1'>
+               <view class='li1_lf'>
+                  <image mode='widthFix' src='/images/grzx_icon1.png'></image>昵称
+                </view>
+                 <text class='li1_rt'>156****2288</text>
+            </view>
+             <view class='li1'>
+               <view class='li1_lf'>
+                  <image mode='widthFix' src='/images/grzx_icon2.png'></image>真实姓名
+              </view>
+                 <text class='li1_rt'>雷志刚</text>
+            </view>
+             <view class='li1'>
+               <view class='li1_lf'>
+                  <image mode='widthFix' src='/images/grzx_icon3.png'></image>性别
+                </view>
+                 <text class='li1_rt'>男</text>
+            </view>
+             <view class='li1'>
+               <view class='li1_lf'>
+                  <image mode='widthFix' src='/images/grzx_icon4.png'></image>手机号码
+                </view>
+                 <text class='li1_rt'>15688882288</text>
+            </view>
+         </view>
+      </view>
+		</view>

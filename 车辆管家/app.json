@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/jzwf/jzwf",
+    "pages/wzxq/wzxq",
+    "pages/caradd/caradd",
+    "pages/login/login",
+    "pages/jzxq/jzxq",
+    "pages/jzadd/jzadd",
+    "pages/personal/personal",
+    "pages/loginmode/loginmode"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#64d5ff",
+    "navigationBarTitleText": "车辆管家",
+    "navigationBarTextStyle": "white"
+  },
+      "tabBar": {
+        "color": "#000000",
+        "backgroundColor": "#fff",
+        "selectedColor": "#4169E1",
+        "list": [
+          {
+            "pagePath": "pages/index/index",
+            "text": "车辆违法",
+            "iconPath": "images/footer_icon1.png",
+            "selectedIconPath":"images/footer_icon1.png"
+          },
+          {
+            "pagePath": "pages/jzwf/jzwf",
+            "text": "驾照违法",
+            "iconPath": "images/footer_icon2.png",
+            "selectedIconPath": "images/footer_icon2.png"
+          },
+          {
+            "pagePath": "pages/wzxq/wzxq",
+            "text": "我的",
+            "iconPath": "images/footer_icon3.png",
+            "selectedIconPath": "images/footer_icon3.png"
+          }
+        ]
+      }
+}
