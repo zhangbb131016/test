@@ -17,27 +17,30 @@
     "navigationBarTextStyle": "white"
   },
       "tabBar": {
-        "color": "#000000",
         "backgroundColor": "#fff",
-        "selectedColor": "#4169E1",          
+        "color": "#666",
+        "selectedColor": "#4b91ed",
         "list": [
           {
             "pagePath": "pages/index/index",
             "text": "车辆违法",
-            "iconPath": "images/footer_icon1.png",
-            "selectedIconPath":"images/footer_icon1.png"
+            "iconPath": "images/footer_icon1_hov.png",
+            "selectedIconPath":"images/footer_icon1.png",
+            "selectedColor": "#ff5527"
           },
           {
             "pagePath": "pages/jzwf/jzwf",
             "text": "驾照违法",
-            "iconPath": "images/footer_icon2.png",
-            "selectedIconPath": "images/footer_icon2.png"
+            "iconPath": "images/footer_icon2_hov.png",
+            "selectedIconPath": "images/footer_icon2.png",
+            "selectedColor": "#ffa813"
           },
           {
             "pagePath": "pages/wzxq/wzxq",
             "text": "我的",
-            "iconPath": "images/footer_icon3.png",
-            "selectedIconPath": "images/footer_icon3.png"
+            "iconPath": "images/footer_icon3_hov.png",
+            "selectedIconPath": "images/footer_icon3.png",
+            "selectedColor": "#2ba4e6"
           }
         ]
       }
