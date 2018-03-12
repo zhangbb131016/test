@@ -7,7 +7,21 @@ Page({
   data: {
   
   },
-
+  toPhoneLogin:function()
+  {
+    wx.navigateTo({
+      url: '/pages/login/login',
+    })
+  },
+  wxLogin:function()
+  {
+    wx.login({
+      success:function(res)
+      {
+        console.log(res)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

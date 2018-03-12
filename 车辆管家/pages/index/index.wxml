@@ -23,7 +23,7 @@
             </view>
          </view>
       </view>
- <view class='clgj_main_add' wx:if="{{carList}}>3" bindtap="addCar">
+ <view class='clgj_main_add' bindtap="addCar">
     <view class='img_add'>
       <image mode='widthFix' src='/images/add.png'></image>
     </view>
@@ -32,5 +32,5 @@
  </view>
   </view>
   <!--footer  -->
-  <template is="footer"/>
+  <!-- <template is="footer"/> -->
 </view>
