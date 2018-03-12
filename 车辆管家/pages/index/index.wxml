@@ -9,7 +9,7 @@
          <view class='black1'>
             <view class='row'>
                <text class='text_big'>{{item.hphm}}</text>
-               <image mode='widthFix' src='/images/xiugai.png' class='xiugai'></image>
+               <image mode='widthFix' src='/images/del.png' class='xiugai'></image>
             </view>
             <view class='row'>
                <image mode='widthFix' src='/images/name.png' class='name_icon'></image>
