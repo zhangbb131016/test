@@ -36,6 +36,26 @@
      <view class='text_add text_add2'>享受新违章通知、在线办理违章、缴费等服务</view>
  </view>
   </view>
-  <!--footer  -->
-  <!-- <template is="footer"/> -->
+
+<view class="btn" bindtap="powerDrawer" data-statu="open">button</view>
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
+<view class='drawer_box_main'>
+ <text>1、本平台仅支持小型车辆使用车主驾驶证处理非现场交通违法记录的情形。</text> 
+ <text>2、本平台仅可处理注册地为吉林省内的机动车，适用简易程序处理（罚款不超过200元）的非现场交通违法记录，其他记录须到违法发生地或车辆注册地交通违法处理窗口处理。</text> 
+ <text>3、对于车主驾驶证累积记分将超过12分（含12分）的非现场交通违法记录，须到违法发生地或车辆注册地交通违法处理窗口处理。</text> 
+ <text>4、本平台生成的处罚决定书编号须于2小时内完成网上缴费支付，超时未完成缴费支付的，处罚决定书编号将自动失效，平台生成的处罚决定书编号不支持线下银行营业厅缴费。</text> 
+ <text>5、由于网络数据传输延迟，可能导致互联网服务平台驾驶证累积记分未及时更新，如在公安机关交通管理部门被记分的，建议短时间内不要使用本平台处理记分的交通违法记录，以免超分。</text> 
+<text>6、对非现场违法记录事实认定和处理均无异议，方可应用本平台进行处理。如对违法事实有异议，应当本人持驾驶证、身份证等相关证件前往违法行为发生地公安机关交警部门申请查看违法照片，并进行相应处理。</text>
+<text>7、如需处罚决定书，须前往违法发生地或车辆注册地交通违法处理窗口处理该违法记录并打印处罚决定书；如需缴罚票据，需持已打印的处罚决定书到指定的银行营业厅缴费并索取。</text>
+<text>如用户在本平台绑定他人名下机动车及车主驾驶证，处理违法记录并缴纳罚款而产生纠纷的，发起该缴费操作具体行为的用户将承担相应法律责任。
+</text>
+<view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view> 
+</view>
+ 
+</view>
+
 </view>
