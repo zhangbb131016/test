@@ -36,7 +36,7 @@
             "selectedColor": "#ffa813"
           },
           {
-            "pagePath": "pages/wzxq/wzxq",
+            "pagePath": "pages/personal/personal",
             "text": "我的",
             "iconPath": "images/footer_icon3_hov.png",
             "selectedIconPath": "images/footer_icon3.png",

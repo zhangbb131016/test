@@ -13,22 +13,33 @@
 			<view class="logon_main_w">
 				<view class="logon_main">
 					<view class="logon_ul">
-						<view class='logon_ul_li li_yzm_w'>
+						<view class='logon_ul_li'>
 							<view class="li_lf li_lf1">
                   <image mode='widthFix' src="/images/phone.png" class="img1"></image>
 							</view>
 							<view class="li_rt">
 								<input type="text" placeholder="请输入手机号码" bindinput='phoneImport' maxlength="11"/>
 							</view>
-              	<view class="{{isPhoneLength?'li_yzm_select':'li_yzm_nomal'}} li_yzm" bindtap='getCode'>{{timeOutString}}</view>
 						</view>
-						<view class='logon_ul_li'>
+            	<view class='logon_ul_li li_yzm_w'>
 							<view class="li_lf">
                  <image mode='widthFix' src="/images/password.png"></image>
 							</view>
 							<view class="li_rt">
-								<input type="text" placeholder="请输入验证码" />
+								<input type="text" placeholder="请输入图形验证码" />
 							</view>
+              <view class="li_yzm li_yzm1">
+              <image mode='scaleToFill' src='/images/yzm1.png'></image>
+              </view>
+						</view>
+						<view class='logon_ul_li li_yzm_w'>
+							<view class="li_lf">
+                 <image mode='widthFix' src="/images/password.png"></image>
+							</view>
+							<view class="li_rt">
+								<input type="text" placeholder="请输入手机验证码" />
+							</view>
+              <view class="{{isPhoneLength?'li_yzm_select':'li_yzm_nomal'}} li_yzm" bindtap='getCode'>{{timeOutString}}</view>
 						</view>
 					</view>
 					<!-- <view class="logon_row">

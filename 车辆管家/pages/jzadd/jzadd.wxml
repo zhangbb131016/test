@@ -9,46 +9,23 @@
     <view class='bindCaritem bindCarnum'>
       <text class='bindCarKey'>驾照号码</text>
       <view class='inpt_w'>
-      <input type='text' placeholder='请输入驾照号码' placeholder-style="font-size:32rpx"></input>
+      <input type='text' bindinput ="jzInput" placeholder='请输入驾照号码' placeholder-style="font-size:32rpx"></input>
       </view>
     </view>
     <view class='bindCaritem bindCarnum'>
       <text class='bindCarKey'>档案编号</text>
       <view class='inpt_w'>
-      <input type='text' placeholder='请输入档案编号' placeholder-style="font-size:32rpx"></input>
+      <input type='text' bindinput ="daInput" placeholder='请输入档案编号' placeholder-style="font-size:32rpx"></input>
       </view>
     </view>
     <view class='bindCaritem bindCarnum'>
       <text class='bindCarKey'>驾照姓名</text>
       <view class='inpt_w'>
-      <text class='text_black'>雷志刚</text>
+      <input type='text' bindinput ="xmInput" placeholder='请输入驾照姓名' placeholder-style="font-size:32rpx"></input>
       </view>
     </view>
   </view>
   <text class='notice'>您填写的信息均经过加密数据传输，请放心填写</text>
-  <button type='button'class='commit' >提交</button>
+  <button type='button' class='commit' bindtap='commit'>提交</button>
 </view>
- <!--footer  -->
-  <view class='clgj_footer'>
-     <li>
-        <view class='icon'>
-            <image mode='widthFix' src="/images/footer_icon1.png"></image>
-        </view>
-        <text>车辆违法</text>
-     </li>
-      <li class='li_hov'>
-        <view class='icon'>
-            <image mode='widthFix' src="/images/footer_icon2.png"></image>
-        </view>
-        <text>驾照违法</text>
-     </li>
-      <li>
-        <view class='icon'>
-            <image mode='widthFix' src="/images/footer_icon3.png"></image>
-        </view>
-        <text>我的</text>
-     </li>
-  </view>
-  <!--footer  -->
-  <template is="footer"/>
 </view>

@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": 1,
@@ -74,6 +74,12 @@
 					"id": -1,
 					"name": "loginmode",
 					"pathName": "pages/loginmode/loginmode",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
 					"query": ""
 				}
 			]

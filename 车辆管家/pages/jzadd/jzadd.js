@@ -1,65 +1,62 @@
+//index.js
+//获取应用实例
+const app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    drivingInfos: [],
+    loading: true,
+    jz: '',
+    da: '',
+    xm: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
+  jzInput: function (e) {
+    this.setData({
+      jz: e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
+  daInput: function (e) {
+    this.setData({
+      da: e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
+  xmInput: function (e) {
+    this.setData({
+      xm: e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
+  commit: function () {
+    wx.request({
+      url: app.globalData.baseurl + "/weixin/wx_member/saveMyDriving",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        jzhm: this.data.jz,
+        dabh: this.data.da,
+        xm: this.data.xm,
+        userGuid: '4377d0a6-58fd-498b-8cab-7b74f069939c'
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        // wx.showToast({
+        //   title: '成功',
+        //   icon: 'success',
+        //   duration: 2000
+        // })   
+      }
+    })
+    console.log(this.data.jz, this.data.da, this.data.xm)
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
+  onLoad: function () {
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
   }
 })
