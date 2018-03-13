@@ -1,0 +1,8 @@
+.li_yzm_select
+{
+  color: #8598FF;
+}
+.li_yzm_nomal
+{
+  color: #ccc;
+}

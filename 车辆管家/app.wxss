@@ -202,9 +202,9 @@ animation:cloud3An 60s linear;}
 	}
 }
 /*波纹*/
-.ripple{width: 100%;height: 84rpx;float: left;position: relative;overflow: hidden;background: #00b1f9;}
+.ripple{width: 100%;height: 50rpx;float: left;position: relative;overflow: hidden;background: #00b1f9;}
 .ripple image{height: 100%;}
-.ripple_bg{height: 70rpx;position: absolute;left: 0;top: 0;z-index: 1;
+.ripple_bg{height: 70rpx;position: absolute;left: 0;top: 16rpx;z-index: 1;
     animation:ripplebgAn 12s linear 4s infinite;}
 @keyframes ripplebgAn{
 	from{
@@ -214,20 +214,20 @@ animation:cloud3An 60s linear;}
 		left: -1400rpx;
 	}
 }
-.ripple1{height: 80rpx;position: absolute;left: 0;bottom: 0;z-index: 3;transform-origin:center bottom;
+.ripple1{height: 80rpx;position: absolute;left: 0;top: 24rpx;z-index: 3;transform-origin:center bottom;
    animation: ripple1An 7s linear infinite;}
   @keyframes ripple1An {
     0% {
         transform: translateX(0) translateZ(0) scaleY(1)
     }
      50% {
-        transform: translateX(-25%) translateZ(0rem) scaleY(0.9)
+        transform: translateX(-25%) translateZ(0rem) scaleY(0.95)
     }
     100% {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }    
-.ripple2{height: 80rpx;position: absolute;left: 0;bottom: 0;z-index: 4;transform-origin:center bottom;
+.ripple2{height: 80rpx;position: absolute;left: 0;top: 24rpx;z-index: 4;transform-origin:center bottom;
    animation: ripple2An 7s linear infinite;}
 @keyframes ripple2An {
      
@@ -235,20 +235,20 @@ animation:cloud3An 60s linear;}
         transform: translateX(0) translateZ(0) scaleY(1)
     }
      50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.9)
+        transform: translateX(-25%) translateZ(0) scaleY(0.95)
     }
     100% {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }  
  /*车辆管家-main  */
-.clgj_main{width: 100%;float: left;position: relative;top: -50rpx;z-index: 10;padding: 0 40rpx 90rpx;box-sizing: border-box;}
+.clgj_main{width: 100%;float: left;position: relative;z-index: 10;padding: 0 40rpx;box-sizing: border-box;margin-bottom: 20rpx;}
 .clgj_main_top{width: 100%;float: left;padding: 0 30rpx;box-sizing: border-box;border-left: 2px solid #00a6e8;border-radius: 4px;box-shadow: 0 0 10rpx #b9c4fc;background: #fff;margin-bottom: 20rpx;}
 .clgj_main_top .black1{width: 100%;float: left;position: relative;padding: 16rpx 0;}
 .clgj_main_top .black1 .row{width: 100%;line-height: 48rpx;float: left;margin: 8rpx 0;}    
 .clgj_main_top .black1 .row.row1{text-align: center;color: #888;font-size: 30rpx;margin: 2rpx 0;}
 .clgj_main_top .black1 .row .text_big{float: left;color: #000;font-size: 36rpx;}    
-.clgj_main_top .black1 .row .xiugai{width: 36rpx;height: 36rpx;float: right;margin-top: 4rpx;}    
+.clgj_main_top .black1 .row .xiugai{width: 40rpx;height: 40rpx;float: right;margin-top: 6rpx;}    
 .clgj_main_top .black1 .row .name_icon{width: 26rpx;height: 26rpx;float: left;margin: 12rpx 10rpx 0 0;}   
 .clgj_main_top .black1 .row .text_gray{ color: #999;font-size: 30rpx;}    
 .clgj_main_top .black1 .row.row1 .row_lf{float: left;}
@@ -257,7 +257,7 @@ animation:cloud3An 60s linear;}
 .clgj_main_top .black1 .line{width: 100%;float: left;position: relative;margin: 10rpx 0 12rpx;}
 .clgj_main_top .black1 .line::after{position: absolute;right: 0;bottom: 0;left: 0;height: 2rpx;
     content: '';-webkit-transform: scaleY(.5);transform: scaleY(.5);background-color: #808080;}
-.clgj_main_add{width: 100%;float: left;padding: 16rpx 20rpx;margin-bottom: 20rpx;background: #e1f7ff;border-radius: 5px;border: 2rpx dashed #0068b7;box-sizing: border-box;}
+.clgj_main_add{width: 100%;float: left;padding: 16rpx 20rpx;background: #e1f7ff;border-radius: 5px;border: 2rpx dashed #0068b7;box-sizing: border-box;}
 .clgj_main_add .img_add{width: 100%;height: 64rpx;float: left;margin: 12rpx 0 16rpx;text-align: center;}
 .clgj_main_add .img_add image{width: 64rpx;height: 64rpx;} 
 .clgj_main_add .text_add{width: 100%;line-height: 44rpx;float: left;margin: 6rpx 0;text-align: center;}
@@ -309,7 +309,7 @@ animation:cloud3An 60s linear;}
 .logon_main .logon_ul .logon_ul_li .li_lf image{width: 100%;vertical-align: middle;}
 .logon_main .logon_ul .logon_ul_li .li_rt{padding-left: 64rpx;}
 .logon_main .logon_ul .logon_ul_li .li_rt input{width: 100%;height: 40rpx;line-height: 40rpx;float: left;margin-top: 32rpx;font-size: 32rpx;}
-.logon_main .logon_ul .logon_ul_li .li_yzm{height: 36rpx;line-height: 36rpx;float: right;margin-top: 40rpx;font-size: 32rpx;border-left: 1rpx solid #ccc;padding-left: 20rpx;color: #ccc;}
+.logon_main .logon_ul .logon_ul_li .li_yzm{height: 36rpx;line-height: 36rpx;float: right;margin-top: 40rpx;font-size: 32rpx;border-left: 1rpx solid #ccc;padding-left: 20rpx;}
 .logon_main .logon_ul .logon_ul_li.li_yzm_w .li_rt{padding: 0 240rpx 0 64rpx;}
 .logon_main .logon_row{width: 100%;line-height: 40rpx;float: left;margin: 30rpx 0;font-size: 24rpx;}
 .logon_main .logon_row .a1{float: left;color: #5990f4;}
@@ -326,7 +326,7 @@ animation:cloud3An 60s linear;}
 
        /*违法驾照  */
 .clgj_main_top .black1.black2 .row{margin: 12rpx 0;}
-.clgj_main_top .black1.black2 .row .xiugai{width: 40rpx;height: 40rpx;margin-top: 6rpx;}  
+.clgj_main_top .black1.black2 .row .xiugai{width: 40rpx;height: 40rpx;margin-top: 0;}  
 .clgj_main_top .black1.black2 .row .name_icon{width: 30rpx;height: 30rpx;margin: 12rpx 10rpx 0 0;}   
     /*违法驾照结束 */
 

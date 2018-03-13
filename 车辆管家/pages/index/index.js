@@ -11,9 +11,16 @@ Page({
   //添加车辆
   addCar:function()
   {
-    wx.navigateTo({
-      url: '/pages/caradd/caradd',
-    })
+    if(!getApp().data.isLogin)
+    {
+      wx.navigateTo({
+        url: '/pages/loginmode/loginmode',
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/caradd/caradd',
+      })
+    }
   },
   onLoad: function () {
     this.getList()
