@@ -34,7 +34,7 @@
             "selectedIconPath": "images/footer_icon2.png"
           },
           {
-            "pagePath": "pages/wzxq/wzxq",
+            "pagePath": "pages/personal/personal",
             "text": "我的",
             "iconPath": "images/footer_icon3.png",
             "selectedIconPath": "images/footer_icon3.png"

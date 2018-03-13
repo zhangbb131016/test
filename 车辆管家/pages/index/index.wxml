@@ -5,11 +5,16 @@
   <template is="header"/>
   <!--mian  -->
   <view class='clgj_main'>
-      <view class='clgj_main_top' wx:for="{{carList}}">
+    <view class='loading' wx:if='{{loading}}'>
+      <image src='/images/loading.gif'></image>
+    </view>
+      <navigator class='clgj_main_top' wx:for="{{carList}}" wx:key="{{carList}}"
+      url='../wzxq/wzxq?hphm={{item.hphm}}&carList={{carListString}}'>
          <view class='black1'>
             <view class='row'>
                <text class='text_big'>{{item.hphm}}</text>
-               <image mode='widthFix' src='/images/xiugai.png' class='xiugai'></image>
+               <image mode='widthFix' src='/images/del.png' class='xiugai' catchtap='delcar' 
+               data-carGuid='{{item.carGuid}}'></image>
             </view>
             <view class='row'>
                <image mode='widthFix' src='/images/name.png' class='name_icon'></image>
@@ -22,8 +27,8 @@
                <view class='row_rt'>未处理<text class='span_red'>{{item.totalCount}}</text>次</view>
             </view>
          </view>
-      </view>
- <view class='clgj_main_add' wx:if="{{carList}}>3" bindtap="addCar">
+      </navigator>
+ <view class='clgj_main_add' bindtap="addCar" wx:if='{{carList < 3}}'>
     <view class='img_add'>
       <image mode='widthFix' src='/images/add.png'></image>
     </view>
@@ -32,5 +37,5 @@
  </view>
   </view>
   <!--footer  -->
-  <template is="footer"/>
+  <!-- <template is="footer"/> -->
 </view>

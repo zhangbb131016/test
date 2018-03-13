@@ -7,9 +7,9 @@
   <view class='clgj_main'>
   <view class='bindCar'>
     <view class='bindCaritem'>
-      <picker bindchange="bindPickerChange" value="{{index1}}" range="{{carlist}}">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{carlist}}" range-key='name'>
         <view class="carpicker">
-        车辆类型<text>{{carlist[index1]}}</text>
+        车辆类型<text>{{carlist[index].name}}</text>
          <image mode='widthFix' src="/images/arrow_down.png" class='image1'></image> 
         </view>
       </picker>
@@ -21,23 +21,23 @@
            <image mode='widthFix' src="/images/arrow_down.png" class='image1'></image> 
         </view>
       </picker>
-      <input type='text' placeholder='请输入号码' placeholder-style="font-size:28rpx"></input>
+      <input type='text' bindinput ="cpInput" placeholder='请输入号码' placeholder-style="font-size:28rpx"></input>
     </view>   
     <view class='bindCaritem bindCarnum'>
       <text class='bindCarKey'>车架号码</text>
       <view class='inpt_w'>
-      <input type='text' placeholder='请输入车架号后六位' placeholder-style="font-size:28rpx"></input>
+      <input type='text' bindinput="cjInput" placeholder='请输入车架号后四位' placeholder-style="font-size:28rpx"></input>
       </view>
     </view>
     <view class='bindCaritem bindCarnum'>
       <text class='bindCarKey'>车主姓名</text>
       <view class='inpt_w'>
-      <input type='text' placeholder='请输入车主姓名' placeholder-style="font-size:28rpx"></input>
+      <input type='text' bindinput="nameInput" placeholder='请输入车主姓名' placeholder-style="font-size:28rpx"></input>
       </view>
     </view>
   </view>
   <text class='notice'>您填写的信息均经过加密数据传输，请放心填写</text>
-  <view class='commit'>提交</view>
+  <button class='commit' bindtap='commit'>提交</button>
 </view>
  <!--footer  -->
   <!-- <view class='clgj_footer'>

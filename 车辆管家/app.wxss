@@ -343,3 +343,11 @@ animation:cloud3An 60s linear;}
 .grzx_main .grzx_ul .li1_lf{width: 40%;height: 100%;float: left;color: #323232;font-size: 32rpx;}
 .grzx_main .grzx_ul .li1_lf image{width: 32rpx;float: left;margin: 34rpx 13rpx 0 0;}
 .grzx_main .grzx_ul .li1_rt{height: 100%;float: right;margin-right: 50rpx;color: #000;font-size: 32rpx;text-align: right;}
+
+.loading image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20rpx;
+}
