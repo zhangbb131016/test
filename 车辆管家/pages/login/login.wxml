@@ -18,9 +18,9 @@
                   <image mode='widthFix' src="/images/phone.png" class="img1"></image>
 							</view>
 							<view class="li_rt">
-								<input type="text" placeholder="请输入手机号码" />
+								<input type="text" placeholder="请输入手机号码" bindinput='phoneImport' maxlength="11"/>
 							</view>
-              	<view class="li_yzm">获取验证码</view>
+              	<view class="{{isPhoneLength?'li_yzm_select':'li_yzm_nomal'}} li_yzm" bindtap='getCode'>{{timeOutString}}</view>
 						</view>
 						<view class='logon_ul_li'>
 							<view class="li_lf">
@@ -34,7 +34,7 @@
 					<!-- <view class="logon_row">
             	<navigator url='' class="a2">忘记密码？</navigator> 
 					</view> -->
-					<button type="button" class="logon_btn">登录</button>
+					<button type="button" class="logon_btn" bindtap='login'>登录</button>
 					<view class="ul_bottom">
 						<view class='ul_bottom_li'>
 							<view class="li_top">

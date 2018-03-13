@@ -5,7 +5,65 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    isPhoneLength:false,
+    timeOutString:"获取验证码",
+    second:60
+  },
+
+  //登录
+  login: function () {
+    wx.navigateBack({
+      delta:2
+    })
+  },
+
+  //手机号输入框监听
+  phoneImport: function(res)
+  {
+    var length1 = res.detail.value.length
+    if (length1 == 11)
+    {
+      this.setData({
+        isPhoneLength:true
+      })
+    }else{
+      this.setData({
+        isPhoneLength:false
+      })
+    }
+  },
+  //获取验证码
+  getCode:function()
+  {
+    if (this.data.isPhoneLength)
+    {
+      if(this.data.second == 0)
+      {
+        this.setData({
+          timeOutString:"获取验证码",
+          isPhoneLength: true
+        })
+        return;
+      }
+      else{
+        var that = this;
+        setTimeout(function()
+        {
+          var currentSecond = that.data.second
+          console.log(currentSecond)
+          that.setData({
+            isPhoneLength:false,
+            second: currentSecond - 1,
+            timeOutString: that.data.second+"秒后"
+          })
+          console.log(that.data.second)
+        },1000)
+      }
+
+    }else
+    {
+
+    }
   },
 
   /**

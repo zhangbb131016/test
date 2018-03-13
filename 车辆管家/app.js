@@ -4,6 +4,7 @@ App({
 
   },
   data:({
-    currentPage:1
+    isLogin:false,
+    mainUrl:"https://gaapi.jl.gov.cn/econsole/"
   }),
 })
