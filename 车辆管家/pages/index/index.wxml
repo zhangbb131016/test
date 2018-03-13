@@ -9,7 +9,7 @@
       <image src='/images/loading.gif'></image>
     </view>
       <navigator class='clgj_main_top' wx:for="{{carList}}" wx:key="{{carList}}"
-      url='../wzxq/wzxq?hphm={{item.hphm}}&carList={{carListString}}'>
+      url='../wzxq/wzxq?hphm={{item.hphm}}'>
          <view class='black1'>
             <view class='row'>
                <text class='text_big'>{{item.hphm}}</text>
