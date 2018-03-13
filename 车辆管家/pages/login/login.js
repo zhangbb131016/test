@@ -1,4 +1,29 @@
 // pages/logon/logon.js
+
+// 从从60到到0倒计时
+function countdown(that) {
+  var second = that.data.second
+  if (second == 0) {
+    that.setData({
+      timeOutString: "获取验证码",
+      isPhoneLength: true,
+      second:60
+    });
+    return;
+  }
+  var time = setTimeout(function () {
+    var currentSecond = that.data.second
+    that.setData({
+      isPhoneLength: false,
+      second: currentSecond - 1,
+      timeOutString: that.data.second + "秒"
+    });
+    countdown(that);
+  }
+    , 1000)
+}
+
+
 Page({
 
   /**
@@ -37,40 +62,21 @@ Page({
   {
     if (this.data.isPhoneLength)
     {
-      if(this.data.second == 0)
-      {
-        this.setData({
-          timeOutString:"获取验证码",
-          isPhoneLength: true
-        })
-        return;
-      }
-      else{
-        var that = this;
-        setTimeout(function()
-        {
-          var currentSecond = that.data.second
-          console.log(currentSecond)
-          that.setData({
-            isPhoneLength:false,
-            second: currentSecond - 1,
-            timeOutString: that.data.second+"秒后"
-          })
-          console.log(that.data.second)
-        },1000)
-      }
-
+       countdown(this)
     }else
     {
 
     }
-  },
+},
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.showModal({
+      title: '温馨提示',
+      content: '1、本平台仅支持小型车辆使用车主驾驶证处理非现场交通违法记录的情形。',
+    })
   },
 
   /**
