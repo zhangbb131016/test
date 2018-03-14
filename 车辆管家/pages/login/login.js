@@ -120,12 +120,13 @@ Page({
               getApp().globalData.userGuid = res.data.data.guid
               getApp().globalData.loginStatuChange = true
 
-              wx.showToast({
-                title: res.data.msg
-              })
 
               wx.navigateBack({
                 delta:2
+              })
+
+              wx.showToast({
+                title: "登录成功"
               })
 
             }else{

@@ -15,24 +15,79 @@ Page({
   },
   wxLogin: function (e)
   {
+    var appId = ''
+    var sessionKey = ""
 
-    console.log(e.detail.errMsg)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData)
-    var WXBizDataCrypt = require('../../utils/WXBizDataCrypt')
-
-    var appId = 'wx201f5fda80c1876b'
-    var sessionKey = e.detail.iv
     var encryptedData = e.detail.encryptedData
     var iv = e.detail.iv
-  
-    var pc = new WXBizDataCrypt(appId, sessionKey)
 
-    var data = pc.decryptData(encryptedData, iv)
+    wx.request({
+      url: getApp().globalData.baseurl + "/weixin/clgj/getXcxOpenid?code=" + getApp().globalData.code,
 
-    console.log('解密后 data: ', data)
+      success:(function(res)
+      {
+        console.log(res)
+        appId = res.data.appid
+        sessionKey = res.data.session_key
+        var WXBizDataCrypt = require('../../utils/WXBizDataCrypt')
+        var pc = new WXBizDataCrypt(appId, sessionKey)
+        var data = pc.decryptData(encryptedData, iv)
+        console.log(data)
+        wx.showLoading({
+          title: '登录中..',
+        })
 
+        var code = ""
+        wx.login({
+          success:(function(data){
+            code = data.code
+          })
+        })
+        //登录
+        wx.request({
+          url: getApp().globalData.baseurl + "/weixin/clgj/auth",
 
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          },
+          data: {
+            mobile: data.purePhoneNumber,
+            code: code
+          },
+          method: "POST",
+          success: (function (res) {
+            wx.hideLoading()
+            if (res.data.succ) {
+              var userInfo = { "isLogin": true, "userInfo": res.data.data }
+              var info = {}
+              wx.setStorage({
+                key: 'userInfo',
+                data: userInfo
+              })
+
+              getApp().globalData.isLogin = true
+              getApp().globalData.userInfo = res.data.data
+              getApp().globalData.userGuid = res.data.data.guid
+              getApp().globalData.loginStatuChange = true
+
+              wx.navigateBack({
+                delta: 1
+              })
+
+              wx.showToast({
+                title: "登录成功"
+              })
+
+            } else {
+              wx.showToast({
+                title: res.data.msg,
+                image: "/images/toast_error.png"
+              })
+            }
+          })
+        })
+      })
+    })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -5,6 +5,7 @@ App({
     wx.login({
       success:(function(res){
         that.globalData.code=res.code
+        console.log(res.code)
       })
     })
     
@@ -43,7 +44,7 @@ App({
     //基础接口请求地址
     baseurl: 'https://gaapi.jl.gov.cn/econsole',
 
-    userGuid: '6078045e-3be8-48a5-bac1-eb518d4941bb',
+    userGuid: '',
 
     //用户授权code
     code:"",
