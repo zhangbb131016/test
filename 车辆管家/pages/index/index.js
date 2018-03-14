@@ -128,6 +128,12 @@ Page({
             loading: false
           })
         }
+      },
+      fail: function(){
+        that.setData({
+          carList: null,
+          loading: false
+        })
       }
     })
   },
