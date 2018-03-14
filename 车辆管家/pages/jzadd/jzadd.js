@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+var app = getApp()
 Page({
   data: {
     drivingInfos: [],
@@ -26,6 +25,48 @@ Page({
     })
   },
   commit: function () {
+    
+  },
+  onLoad: function () {
+    this.WxValidate = app.WxValidate(
+      {
+        jzhm: {
+          required: true
+        },
+        dnbh: {
+          required: true
+        },
+        jzxm: {
+          required: true
+        }
+      }, 
+      {
+        jzhm: {
+          required: '请填写您的驾照号码',
+        },
+        dnbh: {
+          required: '请填写您的档案编号',
+        },
+        jzxm: {
+          required: '请填写您的驾照姓名',
+        }
+      }
+    )
+  },
+  formSubmit: function (e) {
+    //提交错误描述
+    if (!this.WxValidate.checkForm(e)) {
+      const error = this.WxValidate.errorList[0]
+      // `${error.param} : ${error.msg} `
+      wx.showToast({
+        title: `${error.msg} `,
+        icon: 'none',
+        duration: 2000
+      })
+      return false
+    }
+    var that = this
+    //提交
     wx.request({
       url: app.globalData.baseurl + "/weixin/wx_member/saveMyDriving",
       header: {
@@ -42,20 +83,17 @@ Page({
         console.log(res)
         app.globalData.loginStatuChange = true
         wx.showToast({
-          title: '成功',
+          title: '添加成功',
           icon: 'success',
           duration: 2000
         })
-        setTimeout(function(){
+        setTimeout(function () {
           wx.navigateBack({
             delta: 1
           })
-        },2000)
+        }, 2000)
       }
     })
-    console.log(this.data.jz, this.data.da, this.data.xm)
-  },
-  onLoad: function () {
   },
   getUserInfo: function (e) {
     console.log(e)

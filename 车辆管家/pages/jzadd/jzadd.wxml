@@ -5,27 +5,29 @@
   <template is="header"/>
   <!--添加车辆  -->
   <view class='clgj_main'>
-  <view class='bindCar'>   
+  <view class='bindCar'>
+  <form bindsubmit="formSubmit" bindreset="formReset">   
     <view class='bindCaritem bindCarnum'>
       <text class='bindCarKey'>驾照号码</text>
       <view class='inpt_w'>
-      <input type='text' bindinput ="jzInput" placeholder='请输入驾照号码' placeholder-style="font-size:32rpx"></input>
+      <input type='text' name='jzhm' bindinput ="jzInput" placeholder='请输入驾照号码' placeholder-style="font-size:32rpx"></input>
       </view>
     </view>
     <view class='bindCaritem bindCarnum'>
       <text class='bindCarKey'>档案编号</text>
       <view class='inpt_w'>
-      <input type='text' bindinput ="daInput" placeholder='请输入档案编号' placeholder-style="font-size:32rpx"></input>
+      <input type='text' name='dnbh' bindinput ="daInput" placeholder='请输入档案编号' placeholder-style="font-size:32rpx"></input>
       </view>
     </view>
-    <view class='bindCaritem bindCarnum'>
+    <view class='bindCaritem bindCarnum' style='border-bottom:none'>
       <text class='bindCarKey'>驾照姓名</text>
       <view class='inpt_w'>
-      <input type='text' bindinput ="xmInput" placeholder='请输入驾照姓名' placeholder-style="font-size:32rpx"></input>
+      <input type='text' name='jzxm' bindinput ="xmInput" placeholder='请输入驾照姓名' placeholder-style="font-size:32rpx"></input>
       </view>
     </view>
+    <text class='notice'>您填写的信息均经过加密数据传输，请放心填写</text>
+    <button formType="submit" class='commit'>提交</button>
+  </form>
   </view>
-  <text class='notice'>您填写的信息均经过加密数据传输，请放心填写</text>
-  <button type='button' class='commit' bindtap='commit'>提交</button>
 </view>
 </view>

@@ -7,7 +7,8 @@ Page({
     carList:[],
     showModalStatus: false,
     ishow: true,
-    loading:true
+    loading: true,
+    ischange: false
   },
 
   powerDrawer: function (e) {
@@ -87,9 +88,9 @@ Page({
     }
   },
   onShow: function () {
-    if (app.globalData.loginStatuChange) {
+    if (app.globalData.loginStatuChange !== this.data.ischange) {
       this.getList()
-      app.globalData.loginStatuChange = !app.globalData.loginStatuChange
+      app.globalData.loginStatuChange = false
     }
   },
   onReady: function () {

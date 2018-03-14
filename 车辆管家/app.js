@@ -1,5 +1,7 @@
 //app.js
+import WxValidate from 'utils/WxValidate'
 App({
+  WxValidate: (rules, messages) => new WxValidate(rules, messages),
   onLaunch: function () {
     var that = this
     wx.login({
@@ -13,7 +15,7 @@ App({
       success: function (res) {
         var userInfo = res.userInfo
         that.globalData.nickName = userInfo.nickName
-        var avatarUrl = userInfo.avatarUrl
+        that.globalData.avatarUrl = userInfo.avatarUrl
         var gender = userInfo.gender //性别 0：未知、1：男、2：女
         var province = userInfo.province
         var city = userInfo.city
@@ -44,7 +46,7 @@ App({
     //基础接口请求地址
     baseurl: 'https://gaapi.jl.gov.cn/econsole',
 
-    userGuid: '',
+    userGuid: '6078045e-3be8-48a5-bac1-eb518d4941bb',
 
     //用户授权code
     code:"",

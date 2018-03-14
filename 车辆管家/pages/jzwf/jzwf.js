@@ -6,7 +6,8 @@ Page({
   data: {
     drivingList: [],
     isshow: true,
-    loading: true
+    loading: true,
+    ischange: false
   },
   //添加车辆
   addjz: function () {
@@ -24,7 +25,7 @@ Page({
     }
   },
   onShow: function() {
-    if (app.globalData.loginStatuChange){
+    if (app.globalData.loginStatuChange !== this.data.ischange){
       this.getList()
       app.globalData.loginStatuChange = false
     }

@@ -42,10 +42,74 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function () {
+    this.WxValidate = app.WxValidate(
+      {
+        cphm: {
+          required: true
+        },
+        cjhm: {
+          required: true
+        },
+        czxm: {
+          required: true
+        }
+      },
+      {
+        cphm: {
+          required: '请填写您的车牌号码',
+        },
+        cjhm: {
+          required: '请填写您的车架号码',
+        },
+        czxm: {
+          required: '请填写车主姓名',
+        }
+      }
+    )
   },
-
+  formSubmit: function (e) {
+    //提交错误描述
+    if (!this.WxValidate.checkForm(e)) {
+      const error = this.WxValidate.errorList[0]
+      // `${error.param} : ${error.msg} `
+      wx.showToast({
+        title: `${error.msg} `,
+        icon: 'none',
+        duration: 2000
+      })
+      return false
+    }
+    var that = this
+    //提交
+    wx.request({
+      url: app.globalData.baseurl + "/weixin/wx_member/saveMyDriving",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        jzhm: this.data.jz,
+        dabh: this.data.da,
+        xm: this.data.xm,
+        userGuid: app.globalData.userGuid
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        app.globalData.loginStatuChange = true
+        wx.showToast({
+          title: '添加成功',
+          icon: 'success',
+          duration: 2000
+        })
+        setTimeout(function () {
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 2000)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

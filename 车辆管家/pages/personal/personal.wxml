@@ -2,8 +2,8 @@
 			<view class="logon_top">
         <image mode='aspectFill' src='/images/logon_bg.png' class='imgbg'></image> 
         <view class='grzx_top'>
-         <image mode='widthFix' src='/images/head.png' class='grzx_head'></image> 
-         <text class='grzx_text'>156****2288</text>
+         <image mode='widthFix' src='{{avatarUrl}}' class='grzx_head'></image> 
+         <text class='grzx_text'>{{nickName}}</text>
          </view>
         <view class='logon_top_main'>
 					 <view class="logon_ripple1">
@@ -20,7 +20,7 @@
                <view class='li1_lf'>
                   <image mode='widthFix' src='/images/grzx_icon1.png'></image>昵称
                 </view>
-                 <text class='li1_rt'>156****2288</text>
+                 <text class='li1_rt'>{{nickName}}</text>
             </view>
              <!-- <view class='li1'>
                <view class='li1_lf'>
