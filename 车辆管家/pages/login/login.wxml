@@ -26,10 +26,10 @@
                  <image mode='widthFix' src="/images/password.png"></image>
 							</view>
 							<view class="li_rt">
-								<input type="text" placeholder="请输入图形验证码" />
+								<input type="text" placeholder="请输入图形验证码" maxlength='4' bindinput='imageCodeImport'/>
 							</view>
               <view class="li_yzm li_yzm1">
-              <image mode='scaleToFill' src='/images/yzm1.png'></image>
+              <image mode='scaleToFill' src = "{{imageCodeUrl}}" ></image>
               </view>
 						</view>
 						<view class='logon_ul_li li_yzm_w'>
@@ -37,7 +37,7 @@
                  <image mode='widthFix' src="/images/password.png"></image>
 							</view>
 							<view class="li_rt">
-								<input type="text" placeholder="请输入手机验证码" />
+								<input type="text" placeholder="请输入手机验证码" bindinput='codeImport' maxlength='6'/>
 							</view>
               <view class="{{isPhoneLength?'li_yzm_select':'li_yzm_nomal'}} li_yzm" bindtap='getCode'>{{timeOutString}}</view>
 						</view>
