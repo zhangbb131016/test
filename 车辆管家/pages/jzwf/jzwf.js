@@ -56,6 +56,12 @@ Page({
             loading: false
           })
         }
+      },
+      fail: function(){
+        that.setData({
+          drivingList: null,
+          loading: false
+        })
       }
     })
   },
