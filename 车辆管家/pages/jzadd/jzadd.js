@@ -40,11 +40,17 @@ Page({
       method: 'POST',
       success: function (res) {
         console.log(res)
-        // wx.showToast({
-        //   title: '成功',
-        //   icon: 'success',
-        //   duration: 2000
-        // })   
+        app.globalData.loginStatuChange = true
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 2000
+        })
+        setTimeout(function(){
+          wx.navigateBack({
+            delta: 1
+          })
+        },2000)
       }
     })
     console.log(this.data.jz, this.data.da, this.data.xm)

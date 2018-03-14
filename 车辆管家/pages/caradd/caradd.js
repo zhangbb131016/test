@@ -69,13 +69,19 @@ Page({
         userGuid: '4377d0a6-58fd-498b-8cab-7b74f069939c'
       },
       method:'POST',
-      success: function(res) {
+      success: function (res) {
         console.log(res)
-        // wx.showToast({
-        //   title: '成功',
-        //   icon: 'success',
-        //   duration: 2000
-        // })   
+        app.globalData.loginStatuChange = true
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 2000
+        })
+        setTimeout(function () {
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 2000)
       }
     })
     console.log(this.data.cp,this.data.cj,this.data.name)
