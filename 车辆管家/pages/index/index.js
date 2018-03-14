@@ -107,18 +107,25 @@ Page({
         "Content-Type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
-        var carInfos = res.data.data.resultCar.mycarList
-        that.setData({
-          carList: carInfos,
-          loading: false
-        })
-        if (that.data.carList.length < 3){
+        if (res.data.data.resultCar){
+          var carInfos = res.data.data.resultCar.mycarList
           that.setData({
-            ishow: true
+            carList: carInfos,
+            loading: false
           })
+          if (that.data.carList.length < 3){
+            that.setData({
+              ishow: true
+            })
+          }else {
+            that.setData({
+              ishow: false
+            })
+          }
         }else {
           that.setData({
-            ishow: false
+            carList: null,
+            loading: false
           })
         }
       }
@@ -127,7 +134,7 @@ Page({
   delcar: function(e){
     var that = this;
     var clxq_guid = e.currentTarget.dataset.carguid
-    console.log(clxq_guid)
+
     wx.showModal({
       title: '解绑',
       content: '是否确定解绑该车辆？',
@@ -141,7 +148,6 @@ Page({
               clxq_guid: clxq_guid
             },
             success: function(res){
-              console.log(res)
               that.getList()
               wx.showToast({
                 title: '解绑成功',

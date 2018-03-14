@@ -7,7 +7,8 @@ Page({
    */
   data: {
     nickName: '',
-    avatarUrl: ''
+    avatarUrl: '',
+    mobile: ''
   },
 
   /**
@@ -16,23 +17,29 @@ Page({
   onLoad: function (options) {
     this.setData({
       nickName: app.globalData.nickName,
-      avatarUrl: app.globalData.avatarUrl
+      avatarUrl: app.globalData.avatarUrl,
+      mobile: app.globalData.userInfo.loginId
     })
-    console.log(this.data.avatarUrl)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    if (!app.globalData.isLogin) {
+      wx.navigateTo({
+        url: '/pages/loginmode/loginmode',
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.setData({
+      mobile: app.globalData.userInfo.loginId
+    })
   },
 
   /**

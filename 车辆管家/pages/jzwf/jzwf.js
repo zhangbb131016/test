@@ -35,18 +35,25 @@ Page({
     wx.request({
       url: app.globalData.baseurl + "/weixin/clgj/wdcl?userGuid=" + app.globalData.userGuid,
       success: function (res) {
-        var drivingInfos = res.data.data.resultDriving.myDrivingList;
-        that.setData({
-          drivingList: drivingInfos,
-          loading: false
-        })
-        if (that.data.drivingList.length < 3){
+        if (res.data.data.resultDriving){
+          var drivingInfos = res.data.data.resultDriving.myDrivingList
           that.setData({
-            isshow: true
+            drivingList: drivingInfos,
+            loading: false
           })
-        } else {
+          if (that.data.drivingList.length < 3) {
+            that.setData({
+              isshow: true
+            })
+          } else {
+            that.setData({
+              isshow: false
+            })
+          }
+        }else {
           that.setData({
-            isshow: false
+            drivingList: null,
+            loading: false
           })
         }
       }
@@ -68,7 +75,6 @@ Page({
               drivingGuid: drivingGuid
             },
             success: function (res) {
-              console.log(res)
               that.getList()
               wx.showToast({
                 title: '解绑成功',

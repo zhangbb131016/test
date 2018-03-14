@@ -33,8 +33,12 @@ App({
       that.globalData.userGuid = userInfo.userInfo.guid
       that.globalData.userInfo = userInfo.data
     }
+<<<<<<< HEAD
     console.log(that.globalData.userGuid)
 
+=======
+    console.log(userInfo.userInfo)
+>>>>>>> faef24cfdeee686b216562784c675cf542e76655
   },
   globalData: {
 
