@@ -121,13 +121,18 @@ Page({
               getApp().globalData.loginStatuChange = true
 
 
-              wx.navigateBack({
-                delta:2
-              })
 
               wx.showToast({
                 title: "登录成功"
               })
+
+              setTimeout(function(){
+                wx.navigateBack({
+                  delta: 2
+                })
+              },1500)
+
+
 
             }else{
               wx.showToast({

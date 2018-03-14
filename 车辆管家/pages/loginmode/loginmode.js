@@ -70,13 +70,16 @@ Page({
               getApp().globalData.userGuid = res.data.data.guid
               getApp().globalData.loginStatuChange = true
 
-              wx.navigateBack({
-                delta: 1
-              })
 
               wx.showToast({
                 title: "登录成功"
               })
+
+              setTimeout(function () {
+                wx.navigateBack({
+                  delta: 1
+                })
+              }, 1500)
 
             } else {
               wx.showToast({
