@@ -83,14 +83,15 @@ Page({
     var that = this
     //提交
     wx.request({
-      url: app.globalData.baseurl + "/weixin/wx_member/saveMyDriving",
+      url: app.globalData.baseurl + "/weixin/wx_member/saveMyCar",
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       data: {
-        jzhm: this.data.jz,
-        dabh: this.data.da,
-        xm: this.data.xm,
+        hphm: this.data.cp,
+        cjhm: this.data.cj,
+        hpzl: '02',
+        czxm: this.data.name,
         userGuid: app.globalData.userGuid
       },
       method: 'POST',
@@ -118,37 +119,6 @@ Page({
       index: 0,
       index2: 0
     })
-  },
-  commit: function(){
-    wx.request({
-      url: app.globalData.baseurl + "/weixin/wx_member/saveMyCar",
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      data: {
-        hphm: this.data.cp,
-        cjhm: this.data.cj,
-        hpzl: '02',
-        czxm: this.data.name,
-        userGuid: '4377d0a6-58fd-498b-8cab-7b74f069939c'
-      },
-      method:'POST',
-      success: function (res) {
-        console.log(res)
-        app.globalData.loginStatuChange = true
-        wx.showToast({
-          title: '成功',
-          icon: 'success',
-          duration: 2000
-        })
-        setTimeout(function () {
-          wx.navigateBack({
-            delta: 1
-          })
-        }, 2000)
-      }
-    })
-    console.log(this.data.cp,this.data.cj,this.data.name)
   },
   /**
    * 生命周期函数--监听页面显示

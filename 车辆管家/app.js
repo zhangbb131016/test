@@ -33,7 +33,8 @@ App({
       that.globalData.userGuid = userInfo.userInfo.guid
       that.globalData.userInfo = userInfo.data
     }
-
+    console.log(userInfo.isLogin)
+    console.log(userInfo.userInfo.guid)
   },
   globalData: {
 
@@ -46,7 +47,7 @@ App({
     //基础接口请求地址
     baseurl: 'https://gaapi.jl.gov.cn/econsole',
 
-    userGuid: '6078045e-3be8-48a5-bac1-eb518d4941bb',
+    userGuid: '',
 
     //用户授权code
     code:"",
