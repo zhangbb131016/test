@@ -43,5 +43,9 @@
             "selectedColor": "#2ba4e6"
           }
         ]
+      },
+      "networkTimeout": {
+        "request": 30000,
+        "downloadFile": 30000
       }
 }

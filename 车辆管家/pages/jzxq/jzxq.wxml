@@ -4,30 +4,32 @@
   <!--header  -->
   <template is="header"/>
   <!--驾照详情  -->
-<view class="clgj_main">
+  <view class='loading' wx:if='{{loading}}'>
+    <image src='/images/loading.gif'></image>
+  </view>
+  <text class='err' wx:if='{{error}}'>暂时无法查询到您的数据</text>
+<view class="clgj_main" wx:if='{{isshow}}'>
   <view class='clgj_main_top'>
          <view class='black1 black2'>
             <view class='row'>
-               <text class='text_big'>雷志刚</text>
+               <text class='text_big'>{{xm}}</text>
                <text class='text_jcbd'>解除绑定</text>
             </view>
             <view class='row'>
                <image mode='widthFix' src='/images/jzwf_icon.png' class='name_icon'></image>
-               <text class='text_gray'>驾驶证号：3709***4255</text>
+               <text class='text_gray'>驾驶证号：{{jzxq.jtglywdxsfzhm}}</text>
             </view>
          </view>
       </view>
   <view class='user_detail'>
-    <view class='detail_list'><text class='list_key'>档案编号</text><text class='list_value'>123456789963</text></view>
-    <view class='detail_list'><text class='list_key'>驾照类型</text><text class='list_value'>C1</text></view>
+    <view class='detail_list'><text class='list_key'>档案编号</text><text class='list_value'>{{jzxq.dabh}}</text></view>
+    <view class='detail_list'><text class='list_key'>驾照类型</text><text class='list_value'>{{jzxq.zjcx}}</text></view>
     <view class='detail_list'><text class='list_key'>驾照状态</text><text class='list_value normal'>正常</text></view>
-    <view class='detail_list'><text class='list_key'>累计计分</text><text class='list_value red'>2</text></view>
-    <view class='detail_list'><text class='list_key'>初次领证日期</text><text class='list_value'>2008-08-29</text></view>
-    <view class='detail_list'><text class='list_key'>下次清分日期</text><text class='list_value'>2018-08-29</text></view>
-    <view class='detail_list'><text class='list_key'>下次体检日期</text><text class='list_value'>2024-08-29</text></view>
-    <view class='detail_list'><text class='list_key'>有效期限</text><text class='list_value'>2014-08-29至2024-08-29</text></view>
+    <view class='detail_list'><text class='list_key'>累计计分</text><text class='list_value red'>{{jzxq.jdcjszljjf}}</text></view>
+    <view class='detail_list'><text class='list_key'>初次领证日期</text><text class='list_value'>{{cclzrq}}</text></view>
+    <view class='detail_list'><text class='list_key'>下次清分日期</text><text class='list_value'>{{gxsj}}</text></view>
+    <view class='detail_list'><text class='list_key'>下次体检日期</text><text class='list_value'>{{fzrq}}</text></view>
+    <view class='detail_list'><text class='list_key'>有效期限</text><text class='list_value'>{{yxqs}}至{{syyxqz}}</text></view>
   </view>
 </view>
-<!--footer  -->
-  <template is="footer"/>
 </view>

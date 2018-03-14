@@ -14,7 +14,7 @@
             <view class='row'>
                <text class='text_big'>{{item.hphm}}</text>
                <image mode='widthFix' src='/images/del.png' class='xiugai' catchtap='delcar' 
-               data-carGuid='{{item.carGuid}}'></image>
+               data-carguid='{{item.carGuid}}'></image>
             </view>
             <view class='row'>
                <image mode='widthFix' src='/images/name.png' class='name_icon'></image>
@@ -28,7 +28,7 @@
             </view>
          </view>
       </navigator>
- <view class='clgj_main_add' bindtap="addCar" wx:if='{{carList < 3}}'>
+ <view class='clgj_main_add' bindtap="addCar" wx:if='{{ishow}}'>
     <view class='img_add'>
       <image mode='widthFix' src='/images/add.png'></image>
     </view>
@@ -37,9 +37,9 @@
  </view>
   </view>
 
-<view class="btn" bindtap="powerDrawer" data-statu="open">button</view>
+<!-- <view class="btn" bindtap="powerDrawer" data-statu="open">button</view> -->
 <!--mask-->
-<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!-- <view class="drawer_screen" catchtap="powerDrawer" wx:if="{{showModalStatus}}"></view>  -->
 <!--content-->
 <!--使用animation属性指定需要执行的动画-->
 <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
@@ -53,7 +53,7 @@
 <text>7、如需处罚决定书，须前往违法发生地或车辆注册地交通违法处理窗口处理该违法记录并打印处罚决定书；如需缴罚票据，需持已打印的处罚决定书到指定的银行营业厅缴费并索取。</text>
 <text>如用户在本平台绑定他人名下机动车及车主驾驶证，处理违法记录并缴纳罚款而产生纠纷的，发起该缴费操作具体行为的用户将承担相应法律责任。
 </text>
-<view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view> 
+<view class="btn_ok" catchtap="close">确定</view> 
 </view>
  
 </view>

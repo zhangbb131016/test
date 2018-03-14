@@ -353,3 +353,10 @@ animation:cloud3An 60s linear;}
   display: block;
   margin-bottom: 20rpx;
 }
+
+.err{
+  text-align: center;
+  display: block;
+  color: red;
+  font-size: 32rpx;
+}
