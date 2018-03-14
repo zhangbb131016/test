@@ -38,7 +38,7 @@
                <view class='li1_lf'>
                   <image mode='widthFix' src='/images/grzx_icon4.png'></image>手机号码
                 </view>
-                 <text class='li1_rt'>15688882288</text>
+                 <text class='li1_rt'>{{mobile}}</text>
             </view>
          </view>
       </view>

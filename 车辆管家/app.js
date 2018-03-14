@@ -33,8 +33,7 @@ App({
       that.globalData.userGuid = userInfo.userInfo.guid
       that.globalData.userInfo = userInfo.data
     }
-    console.log(userInfo.isLogin)
-    console.log(userInfo.userInfo.guid)
+    console.log(userInfo.userInfo)
   },
   globalData: {
 

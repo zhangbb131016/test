@@ -68,7 +68,6 @@ Page({
               drivingGuid: drivingGuid
             },
             success: function (res) {
-              console.log(res)
               that.getList()
               wx.showToast({
                 title: '解绑成功',

@@ -46,10 +46,14 @@ Page({
     this.WxValidate = app.WxValidate(
       {
         cphm: {
-          required: true
+          required: true,
+          minlength: 1,
+          maxlength: 6
         },
         cjhm: {
-          required: true
+          required: true,
+          minlength: 1,
+          maxlength: 4
         },
         czxm: {
           required: true
