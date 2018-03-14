@@ -20,11 +20,6 @@ Page({
       avatarUrl: app.globalData.avatarUrl,
       mobile: app.globalData.userInfo.loginId
     })
-    if (!this.data.mobile){
-      this.setData({
-        mobile: '暂无'
-      })
-    }
   },
 
   /**
@@ -42,7 +37,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.setData({
+      mobile: app.globalData.userInfo.loginId
+    })
   },
 
   /**
