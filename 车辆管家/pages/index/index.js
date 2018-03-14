@@ -77,7 +77,13 @@ Page({
     }
   },
   onLoad: function () {
-    this.getList()
+    if (app.globalData.userGuid == '') {
+      this.setData({
+        loading: false
+      })
+    }else {
+       this.getList()
+    }
   },
   onReady: function () {
     this.util('open')
@@ -93,7 +99,7 @@ Page({
         "Content-Type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
-        var carInfos = res.data.data.resultCar.mycarList;
+        var carInfos = res.data.data.resultCar.mycarList
         that.setData({
           carList: carInfos,
           loading: false
