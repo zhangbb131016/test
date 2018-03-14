@@ -7,6 +7,20 @@ App({
         that.globalData.code=res.code
       })
     })
+    
+    wx.getUserInfo({
+      success: function (res) {
+        var userInfo = res.userInfo
+        var nickName = userInfo.nickName
+        var avatarUrl = userInfo.avatarUrl
+        var gender = userInfo.gender //性别 0：未知、1：男、2：女
+        var province = userInfo.province
+        var city = userInfo.city
+        var country = userInfo.country
+        console.log(userInfo)
+      }
+    })
+
 
     //同步读取用户数据
     var userInfo = wx.getStorageSync("userInfo")
@@ -16,6 +30,7 @@ App({
       that.globalData.userGuid = userInfo.userInfo.guid
       that.globalData.userInfo = userInfo.data
     }
+
   },
   globalData: {
 
@@ -28,7 +43,7 @@ App({
     //基础接口请求地址
     baseurl: 'https://gaapi.jl.gov.cn/econsole',
 
-    userGuid: '4377d0a6-58fd-498b-8cab-7b74f069939c',
+    userGuid: '6078045e-3be8-48a5-bac1-eb518d4941bb',
 
     //用户授权code
     code:"",

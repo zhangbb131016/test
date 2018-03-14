@@ -35,7 +35,7 @@ Page({
         jzhm: this.data.jz,
         dabh: this.data.da,
         xm: this.data.xm,
-        userGuid: '4377d0a6-58fd-498b-8cab-7b74f069939c'
+        userGuid: app.globalData.userGuid
       },
       method: 'POST',
       success: function (res) {

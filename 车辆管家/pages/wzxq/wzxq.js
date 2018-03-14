@@ -16,8 +16,6 @@ Page({
     this.setData({
       hphm: options.hphm
     })
-    console.log(options.carList)
-    console.log(typeof options.carList)
   },
   getList: function () {
     var that = this

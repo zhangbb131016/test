@@ -6,12 +6,13 @@ Page({
   data: {
     carList:[],
     showModalStatus: false,
-      loading:true
+    ishow: true,
+    loading:true
   },
 
   powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
-    this.util(currentStatu)
+    
   },
   util: function (currentStatu) {
 
@@ -68,7 +69,7 @@ Page({
   //添加车辆
   addCar:function()
   {
-    if(!getApp().data.isLogin)
+    if (!app.globalData.isLogin)
     {
       wx.navigateTo({
         url: '/pages/loginmode/loginmode',
@@ -82,29 +83,48 @@ Page({
   onLoad: function () {
     this.getList()
   },
+  onReady: function () {
+    this.util('open')
+  },
+  close: function(){
+    this.util('close')
+  },
   getList: function(){
     var that = this
     wx.request({
       url: app.globalData.baseurl + "/weixin/clgj/wdcl?userGuid=" + app.globalData.userGuid,
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
       success: function (res) {
         var carInfos = res.data.data.resultCar.mycarList;
         that.setData({
           carList: carInfos,
           loading: false
         })
+        if (that.data.carList.length < 3){
+          that.setData({
+            ishow: true
+          })
+        }else {
+          that.setData({
+            ishow: false
+          })
+        }
       }
     })
   },
   delcar: function(e){
     var that = this;
-    var clxq_guid = e.currentTarget.dataset.carGuid;
+    var clxq_guid = e.currentTarget.dataset.carguid
+    console.log(clxq_guid)
     wx.showModal({
       title: '解绑',
       content: '是否确定解绑该车辆？',
       success: function (res) {
         if (res.confirm) {
           wx.request({
-            url: app.globalData.baseurl + "/weixin/clgj/wdcl?delMyCar=" + app.globalData.userGuid + '&clxq_guid=' + clxq_guid,
+            url: app.globalData.baseurl + "/weixin/clgj/delMyCar?userGuid=" + app.globalData.userGuid + '&clxq_guid=' + clxq_guid,
             method: 'GET',
             data:{
               userGuid: app.globalData.userGuid,
@@ -121,11 +141,11 @@ Page({
             }
           })
         } else if (res.cancel) {
-
+          
         }
       }
     })
-
+    
   },
   getUserInfo: function(e) {
     console.log(e)

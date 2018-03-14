@@ -22,7 +22,7 @@
                 </view>
                  <text class='li1_rt'>156****2288</text>
             </view>
-             <view class='li1'>
+             <!-- <view class='li1'>
                <view class='li1_lf'>
                   <image mode='widthFix' src='/images/grzx_icon2.png'></image>真实姓名
               </view>
@@ -33,7 +33,7 @@
                   <image mode='widthFix' src='/images/grzx_icon3.png'></image>性别
                 </view>
                  <text class='li1_rt'>男</text>
-            </view>
+            </view> -->
              <view class='li1'>
                <view class='li1_lf'>
                   <image mode='widthFix' src='/images/grzx_icon4.png'></image>手机号码
