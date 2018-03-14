@@ -9,7 +9,7 @@
       <image src='/images/loading.gif'></image>
     </view>
       <navigator class='clgj_main_top' wx:for='{{drivingList}}' wx:key='{{drivingList}}'
-      url='../jzxq/jzxq?dabh={{item.dabh}}&xm={{item.xm}}&jzhm={{item.jzhm}}&index={{index}}'>
+      url='../jzxq/jzxq?dabh={{item.dabh}}&xm={{item.xm}}&jzhm={{item.jzhm}}&index={{index}}&drivingGuid={{item.drivingGuid}}'>
          <view class='black1 black2'>
             <view class='row'>
                <text class='text_big'>{{item.xm}}</text>

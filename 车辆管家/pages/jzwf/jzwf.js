@@ -5,7 +5,7 @@ const app = getApp()
 Page({
   data: {
     drivingList: [],
-    isshow: false,
+    isshow: true,
     loading: true
   },
   //添加车辆
@@ -15,7 +15,19 @@ Page({
     })
   },
   onLoad: function () {
-    this.getList()
+    if (app.globalData.userGuid == '') {
+      this.setData({
+        loading: false
+      })
+    } else {
+      this.getList()
+    }
+  },
+  onShow: function() {
+    if (app.globalData.loginStatuChange){
+      this.getList()
+      app.globalData.loginStatuChange = false
+    }
   },
   getList: function() {
     var that = this
@@ -69,5 +81,5 @@ Page({
         }
       }
     })
-  },
+  }
 })

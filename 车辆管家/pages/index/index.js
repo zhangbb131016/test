@@ -86,6 +86,12 @@ Page({
        this.getList()
     }
   },
+  onShow: function () {
+    if (app.globalData.loginStatuChange) {
+      this.getList()
+      app.globalData.loginStatuChange = !app.globalData.loginStatuChange
+    }
+  },
   onReady: function () {
     this.util('open')
   },

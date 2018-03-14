@@ -15,6 +15,7 @@ Page({
     fzrq: '',
     yxqs: '',
     syyxqz: '',
+    drivingGuid: '',
     error: false,
     loading: true,
     isshow: false
@@ -28,7 +29,8 @@ Page({
       dabh: options.dabh,
       xm: options.xm,
       jzhm: options.jzhm,
-      index: options.index
+      index: options.index,
+      drivingGuid: options.drivingGuid
     })
     this.getList()
   },
@@ -90,6 +92,40 @@ Page({
   },
   trim:function (str) {
     return str.replace(/(^\s+)|(\s+$)/g, "");
+  },
+  deljz: function (e) {
+    var that = this;
+    wx.showModal({
+      title: '解绑',
+      content: '是否确定解绑该驾照？',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: app.globalData.baseurl + "/weixin/wx_member/delMyDriving?drivingGuid" + that.data.drivingGuid + '&userGuid=' + app.globalData.userGuid,
+            method: 'GET',
+            data: {
+              userGuid: app.globalData.userGuid,
+              drivingGuid: drivingGuid
+            },
+            success: function (res) {
+              app.globalData.loginStatuChange = true
+              wx.showToast({
+                title: '成功',
+                icon: 'success',
+                duration: 2000
+              })
+              setTimeout(function () {
+                wx.navigateBack({
+                  delta: 1
+                })
+              }, 2000)
+            }
+          })
+        } else if (res.cancel) {
+
+        }
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
