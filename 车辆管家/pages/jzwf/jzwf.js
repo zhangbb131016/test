@@ -30,11 +30,15 @@ Page({
       app.globalData.loginStatuChange = false
     }
   },
+  onPullDownRefresh: function () {
+    this.getList()
+  },
   getList: function() {
     var that = this
     wx.request({
       url: app.globalData.baseurl + "/weixin/clgj/wdcl?userGuid=" + app.globalData.userGuid,
       success: function (res) {
+        wx.stopPullDownRefresh()
         if (res.data.data.resultDriving){
           var drivingInfos = res.data.data.resultDriving.myDrivingList
           that.setData({
@@ -58,6 +62,7 @@ Page({
         }
       },
       fail: function(){
+        wx.stopPullDownRefresh()
         that.setData({
           drivingList: null,
           loading: false

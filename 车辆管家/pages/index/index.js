@@ -87,6 +87,9 @@ Page({
        this.getList()
     }
   },
+  onPullDownRefresh: function(){
+    this.getList()
+  },
   onShow: function () {
     if (app.globalData.loginStatuChange !== this.data.ischange) {
       this.getList()
@@ -107,6 +110,7 @@ Page({
         "Content-Type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
+        wx.stopPullDownRefresh()
         if (res.data.data.resultCar){
           var carInfos = res.data.data.resultCar.mycarList
           that.setData({
@@ -130,6 +134,7 @@ Page({
         }
       },
       fail: function(){
+        wx.stopPullDownRefresh()
         that.setData({
           carList: null,
           loading: false
