@@ -13,14 +13,26 @@ Page({
       url: '/pages/login/login',
     })
   },
-  wxLogin:function()
+  wxLogin: function (e)
   {
-    wx.login({
-      success:function(res)
-      {
-        console.log(res)
-      }
-    })
+
+    console.log(e.detail.errMsg)
+    console.log(e.detail.iv)
+    console.log(e.detail.encryptedData)
+    var WXBizDataCrypt = require('../../utils/WXBizDataCrypt')
+
+    var appId = 'wx201f5fda80c1876b'
+    var sessionKey = e.detail.iv
+    var encryptedData = e.detail.encryptedData
+    var iv = e.detail.iv
+  
+    var pc = new WXBizDataCrypt(appId, sessionKey)
+
+    var data = pc.decryptData(encryptedData, iv)
+
+    console.log('解密后 data: ', data)
+
+
   },
   /**
    * 生命周期函数--监听页面加载

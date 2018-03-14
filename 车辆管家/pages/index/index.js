@@ -14,6 +14,10 @@ Page({
     this.util(currentStatu)
   },
   util: function (currentStatu) {
+
+    wx.navigateTo({
+      url: '/pages/loginmode/loginmode',
+    })
     /* 动画部分 */
     // 第1步：创建动画实例
     var animation = wx.createAnimation({

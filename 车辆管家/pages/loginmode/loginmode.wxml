@@ -1,6 +1,6 @@
 <view class='loginmode'>
     <view class='main'>
-       <button type='button' class='btn' bindtap='wxLogin'>
+       <button type='button' class='btn' bindgetphonenumber='wxLogin' open-type="getPhoneNumber">
          <image mode='widthFix' src='/images/weixin.png'></image>微信用户快速登录</button>
         <button type='button' class='btn btn1' bindtap='toPhoneLogin' >
           <image mode='widthFix' src='/images/sj.png'></image>
