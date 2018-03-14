@@ -119,8 +119,8 @@ Page({
               getApp().globalData.userInfo = res.data.data
               getApp().globalData.userGuid = res.data.data.guid
               getApp().globalData.loginStatuChange = true
-
-
+              
+              console.log(getApp().globalData.userGuid)
 
               wx.showToast({
                 title: "登录成功"

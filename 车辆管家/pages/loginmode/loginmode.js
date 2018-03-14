@@ -70,6 +70,8 @@ Page({
               getApp().globalData.userGuid = res.data.data.guid
               getApp().globalData.loginStatuChange = true
 
+              console.log(res.data.data)
+
 
               wx.showToast({
                 title: "登录成功"

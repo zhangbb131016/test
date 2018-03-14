@@ -14,7 +14,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#64d5ff",
     "navigationBarTitleText": "车辆管家",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "light",
+    "backgroundColor": "#64d5ff"
   },
       "tabBar": {
         "backgroundColor": "#fff",
