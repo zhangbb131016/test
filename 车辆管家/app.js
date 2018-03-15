@@ -31,7 +31,7 @@ App({
     {
       that.globalData.isLogin = userInfo.isLogin
       that.globalData.userGuid = userInfo.userInfo.guid
-      that.globalData.userInfo = userInfo.data
+      that.globalData.userInfo = userInfo.userInfo
     }
   },
   globalData: {
