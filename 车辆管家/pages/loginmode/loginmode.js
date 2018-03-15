@@ -1,4 +1,7 @@
 // pages/loginmode/loginmode.js
+
+var code = ""
+
 Page({
 
   /**
@@ -15,90 +18,94 @@ Page({
   },
   wxLogin: function (e)
   {
-    var appId = ''
-    var sessionKey = ""
+    if (e.detail.errMsg != "getPhoneNumber:fail user deny")
+    {
+      var appId = ''
+      var sessionKey = ""
 
-    var encryptedData = e.detail.encryptedData
-    var iv = e.detail.iv
+      var encryptedData = e.detail.encryptedData
+      var iv = e.detail.iv
 
-    wx.request({
-      url: getApp().globalData.baseurl + "/weixin/clgj/getXcxOpenid?code=" + getApp().globalData.code,
+      wx.request({
+        url: getApp().globalData.baseurl + "/weixin/clgj/getXcxOpenid?code=" + getApp().globalData.code,
 
-      success:(function(res)
-      {
-        console.log(res)
-        appId = res.data.appid
-        sessionKey = res.data.session_key
-        var WXBizDataCrypt = require('../../utils/WXBizDataCrypt')
-        var pc = new WXBizDataCrypt(appId, sessionKey)
-        var data = pc.decryptData(encryptedData, iv)
-        console.log(data)
-        wx.showLoading({
-          title: '登录中..',
-        })
-
-        var code = ""
-        wx.login({
-          success:(function(data){
-            code = data.code
+        success: (function (res) {
+          console.log(res)
+          appId = res.data.appid
+          sessionKey = res.data.session_key
+          var WXBizDataCrypt = require('../../utils/WXBizDataCrypt')
+          var pc = new WXBizDataCrypt(appId, sessionKey)
+          var data = pc.decryptData(encryptedData, iv)
+          console.log(data)
+          wx.showLoading({
+            title: '登录中..',
           })
-        })
-        //登录
-        wx.request({
-          url: getApp().globalData.baseurl + "/weixin/clgj/auth",
 
-          header: {
-            'content-type': 'application/x-www-form-urlencoded'
-          },
-          data: {
-            mobile: data.purePhoneNumber,
-            code: code
-          },
-          method: "POST",
-          success: (function (res) {
-            wx.hideLoading()
-            if (res.data.succ) {
-              var userInfo = { "isLogin": true, "userInfo": res.data.data }
-              var info = {}
-              wx.setStorage({
-                key: 'userInfo',
-                data: userInfo
-              })
+          //登录
+          wx.request({
+            url: getApp().globalData.baseurl + "/weixin/clgj/auth",
 
-              getApp().globalData.isLogin = true
-              getApp().globalData.userInfo = res.data.data
-              getApp().globalData.userGuid = res.data.data.guid
-              getApp().globalData.loginStatuChange = true
-
-              console.log(res.data.data)
-
-
-              wx.showToast({
-                title: "登录成功"
-              })
-
-              setTimeout(function () {
-                wx.navigateBack({
-                  delta: 1
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            data: {
+              mobile: data.purePhoneNumber,
+              code: code,
+              login:"fast"
+            },
+            method: "POST",
+            success: (function (res) {
+              wx.hideLoading()
+              if (res.data.succ) {
+                var userInfo = { "isLogin": true, "userInfo": res.data.data }
+                var info = {}
+                wx.setStorage({
+                  key: 'userInfo',
+                  data: userInfo
                 })
-              }, 1500)
 
-            } else {
-              wx.showToast({
-                title: res.data.msg,
-                image: "/images/toast_error.png"
-              })
-            }
+                getApp().globalData.isLogin = true
+                getApp().globalData.userInfo = res.data.data
+                getApp().globalData.userGuid = res.data.data.guid
+                getApp().globalData.loginStatuChange = true
+
+                console.log(res.data.data)
+
+
+                wx.showToast({
+                  title: "登录成功"
+                })
+
+                setTimeout(function () {
+                  wx.navigateBack({
+                    delta: 1
+                  })
+                }, 1500)
+
+              } else {
+                wx.showToast({
+                  title: res.data.msg,
+                  image: "/images/toast_error.png"
+                })
+              }
+            })
           })
         })
       })
-    })
+    }
+    else{
+      console.log("取消授权")
+    }
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.login({
+      success: (function (data) {
+        code = data.code
+      })
+    })
   },
 
   /**

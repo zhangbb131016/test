@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "驾照违法"
+  "navigationBarTitleText": "驾照违法",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#64d5ff"
 }

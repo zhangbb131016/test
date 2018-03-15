@@ -131,9 +131,6 @@ Page({
                   delta: 2
                 })
               },1500)
-
-
-
             }else{
               wx.showToast({
                 title: res.data.msg,
