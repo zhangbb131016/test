@@ -38,6 +38,8 @@ Page({
    */
   onShow: function () {
     this.setData({
+      nickName: app.globalData.nickName,
+      avatarUrl: app.globalData.avatarUrl,
       mobile: app.globalData.userInfo.loginId
     })
   },
