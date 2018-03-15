@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
     carList:[],
@@ -13,10 +12,9 @@ Page({
 
   powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
-    
+
   },
   util: function (currentStatu) {
-
     /* 动画部分 */
     // 第1步：创建动画实例
     var animation = wx.createAnimation({
@@ -168,11 +166,11 @@ Page({
             }
           })
         } else if (res.cancel) {
-          
+
         }
       }
     })
-    
+
   },
   getUserInfo: function(e) {
     console.log(e)

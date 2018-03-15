@@ -2,38 +2,27 @@
 <view class="clgj_top">
     <!--建筑剪影-->
     <view class="jzjy">
-      <image mode='aspectFit' src="/images/home_bg.png" style='width: 1800rpx;'></image>
+      <image mode='widthFix' src="/images/home_bg.png" class='image1' ></image>
+       <image mode='widthFix' src="/images/home_bg.png" class='image2' ></image>
+        <image mode='widthFix' src="/images/home_bg.png" class='image3' ></image>
     </view>
     <!--云1-->
     <view class="cloud1">
-      <image mode='aspectFit' src="/images/cloud1.png" style='width: 76rpx;'></image>
+      <image mode='widthFix' src="/images/cloud2.png" ></image>
     </view>
     <!--云2-->
     <view class="cloud2">
-      <image mode='aspectFit' src="/images/cloud2.png" style='width: 100rpx;'></image>
-    </view>
-     <!--云3-->
-    <view class="cloud3">
-      <image mode='widthFix' src="/images/cloud3.png"></image>
-    </view>
-    <!--大路-->
-    <view class="road">
-      <image mode='aspectFit' src="/images/road.png" style='width: 2432rpx;'></image>
+      <image mode='widthFix' src="/images/cloud2.png" ></image>
     </view>
     <!--车-->
     <view class="car">
       <image mode='aspectFit' src="/images/car.png" style="width: 150rpx;"></image>
     </view>
-    <!--房子1-->
-    <view class="home1">
-      <image mode='aspectFit' src="/images/home1.png" style="width: 232rpx;"></image>
-    </view>
-    <!--房子2-->
-    <view class="home2">
-      <image mode='aspectFit' src="/images/home2.png" style="width: 114rpx;"></image>
-    </view>
-    <!--风车-->
-    <view class="windmill">
+    <!--背景 -->
+     <view class='backdrop_w'>
+    <image mode='widthFix' src='/images/header_bg.png'></image>
+     <!--风车-->
+     <view class="windmill">
       <view class="windmill_top">
         <image mode='aspectFit' src="/images/windmill.png" style="width: 128rpx;"></image>
       </view>
@@ -41,9 +30,9 @@
         <text class='span1'></text>
         <text class='span1'></text>
       </view>
-    </view>
+    </view> 
     <!--风车2  -->
-    <view class="windmill windmill2">
+     <view class="windmill windmill2">
       <view class="windmill_top">
         <image mode='aspectFit' src="/images/windmill.png" style="width: 128rpx;"></image>
       </view>
@@ -51,29 +40,89 @@
         <text class='span1'></text>
         <text class='span1'></text>
       </view>
-    </view>
+    </view> 
     <!--路灯-->
-    <view class="lamp">
+     <view class="lamp">
       <image mode='aspectFit' src="/images/lamp1.png" style="width: 26rpx;"></image>
       <view class="red"></view>
       <view class="yellow"></view>
       <view class="green"></view>
+    </view> 
     </view>
-    <!--风景  -->
-    <view class='scenery'>
-       <image mode='aspectFit' src="/images/scenery.png" style="width: 1232rpx;"></image>
+    <view class='backdrop1_w'>
+    <image mode='widthFix' src='/images/header_bg.png'></image>
+     <!--风车-->
+     <view class="windmill">
+      <view class="windmill_top">
+        <image mode='aspectFit' src="/images/windmill.png" style="width: 128rpx;"></image>
+      </view>
+      <view class="line">
+        <text class='span1'></text>
+        <text class='span1'></text>
+      </view>
+    </view> 
+    <!--风车2  -->
+     <view class="windmill windmill2">
+      <view class="windmill_top">
+        <image mode='aspectFit' src="/images/windmill.png" style="width: 128rpx;"></image>
+      </view>
+      <view class="line">
+        <text class='span1'></text>
+        <text class='span1'></text>
+      </view>
+    </view> 
+    <!--路灯-->
+     <view class="lamp">
+      <image mode='aspectFit' src="/images/lamp1.png" style="width: 26rpx;"></image>
+      <view class="red"></view>
+      <view class="yellow"></view>
+      <view class="green"></view>
+    </view> 
     </view>
+    <view class='backdrop2_w'>
+     <image mode='widthFix' src='/images/header_bg.png'></image>
+      <!--风车-->
+     <view class="windmill">
+      <view class="windmill_top">
+        <image mode='aspectFit' src="/images/windmill.png" style="width: 128rpx;"></image>
+      </view>
+      <view class="line">
+        <text class='span1'></text>
+        <text class='span1'></text>
+      </view>
+    </view> 
+    <!--风车2  -->
+     <view class="windmill windmill2">
+      <view class="windmill_top">
+        <image mode='aspectFit' src="/images/windmill.png" style="width: 128rpx;"></image>
+      </view>
+      <view class="line">
+        <text class='span1'></text>
+        <text class='span1'></text>
+      </view>
+    </view> 
+    <!--路灯-->
+     <view class="lamp">
+      <image mode='aspectFit' src="/images/lamp.png" style="width: 26rpx;"></image>
+      <view class="red"></view>
+      <view class="yellow"></view>
+      <view class="green"></view>
+    </view> 
+     </view>
   </view>
   <!--波纹-->
   <view class="ripple">
-    <view class="ripple_bg">
-      <image mode='aspectFit' src="/images/ripple_bg.png" style="width: 2020rpx;"></image>
-    </view>
     <view class="ripple1">
-      <image mode='aspectFit' src="/images/ripple1.png" style="width: 2202rpx;"></image>
+        <image mode='widthFix' src="/images/ripple1.png"></image>  
+        <image mode='widthFix' src="/images/ripple2.png"></image>  
     </view>
-    <view class="ripple2">
-      <image mode='aspectFit' src="/images/ripple2.png" style="width: 2202rpx;"></image>
+      <view class="ripple2">
+      <image mode='widthFix' src="/images/ripple1.png"></image>
+      <image mode='widthFix' src="/images/ripple2.png"></image>
     </view>
+     <view class="ripple3">
+      <image mode='widthFix' src="/images/ripple1.png"></image>
+      <image mode='widthFix' src="/images/ripple2.png"></image>
+    </view> 
   </view>
   </template>

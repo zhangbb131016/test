@@ -5,14 +5,21 @@
          <image mode='widthFix' src='{{avatarUrl}}' class='grzx_head'></image> 
          <text class='grzx_text'>{{nickName}}</text>
          </view>
-        <view class='logon_top_main'>
+         <view class='logon_top_main'>
 					 <view class="logon_ripple1">
-            <image mode='widthFix' src="/images/logon_ripple1.png" style='width:3237rpx'></image>
+            <image mode='widthFix' src="/images/logon_ripple1.png"></image>
+            <image mode='widthFix' src="/images/logon_ripple2.png"></image>
 					</view>
 					<view class="logon_ripple2">
-            <image mode='widthFix' src="/images/logon_ripple2.png" style='width:3237rpx'></image>
+            <image mode='widthFix' src="/images/logon_ripple1.png"></image>
+            <image mode='widthFix' src="/images/logon_ripple2.png"></image>
+					</view> 
+          	<view class="logon_ripple3">
+            <image mode='widthFix' src="/images/logon_ripple1.png"></image>
+            <image mode='widthFix' src="/images/logon_ripple2.png"></image>
 					</view> 
           </view>
+		
 			</view>
       <view class='grzx_main'>
          <view class='grzx_ul'>
