@@ -15,8 +15,7 @@
     "navigationBarBackgroundColor": "#64d5ff",
     "navigationBarTitleText": "车辆管家",
     "navigationBarTextStyle": "light",
-    "backgroundColor": "#64d5ff",
-    "enablePullDownRefresh": true
+    "backgroundColor": "#64d5ff"
   },
       "tabBar": {
         "backgroundColor": "#fff",
