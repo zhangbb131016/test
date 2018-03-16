@@ -1,0 +1,136 @@
+.clgj_top{width: 100%;height: 300rpx;float: left;background: #65d4ff;position: relative;}
+.clgj_top image{height: 100%;}
+/*建筑剪影*/
+.clgj_top .jzjy{width: 1500rpx;height: 220rpx;position: relative;left: 0;top: 0;}
+.clgj_top .jzjy .image1{width: 750rpx; position: relative;animation:jzjy1An 60s linear 4s infinite;
+}   
+.clgj_top .jzjy .image2{width: 750rpx; position:relative;
+animation:jzjy1An 60s linear 4s infinite;
+}  
+@keyframes jzjy1An{
+	from{
+		left: 0;
+	}
+	to{
+		left: -750rpx;
+	}
+}
+/*云*/
+.clgj_top .cloud_w{width: 2000rpx;height: 100rpx;position: absolute;top: 0;left: 0;}
+.clgj_top .cloud_w image{width: 100rpx;position: relative;left: 300rpx;}
+.clgj_top .cloud_w .image1{width: 80rpx;position: relative;left: 500rpx;top: -30rpx;}
+.clgj_top .cloud1{width:1000rpx;position: relative;top: 20rpx;
+   animation:cloud1An 30s linear infinite;display: inline-block;
+   }
+.clgj_top .cloud2{width:1000rpx;position: relative;top: 20rpx;
+   animation:cloud1An 30s linear infinite;display: inline-block;
+   }
+@keyframes cloud1An{
+	from{
+		left: 0;
+	}
+	to{
+		left: -1000rpx;
+	}
+}
+/*背景  */
+.backdrop_ww{width: 4000rpx;height: 288rpx;position: absolute;left: 0;top: 30rpx;}
+.backdrop_w{width: 2000rpx;position: relative;animation:backdrop_wAn 24s linear 4s infinite;display: inline-block;}
+  @keyframes backdrop_wAn{
+	0%{
+   left: 0;
+	}
+	100%{
+		left: -2000rpx;
+	}
+}   
+.backdrop_w image{width: 2000rpx;}
+/*车*/
+.clgj_top .car{height: 52rpx;position: absolute;left: 190rpx;bottom: 50rpx;z-index: 4;}
+/*风车*/
+.clgj_top .windmill{width:128rpx;position: absolute;left: 300rpx;top: 30rpx;z-index: 1;}
+.clgj_top .windmill_top{width: 128rpx;height: 128rpx;position: relative;z-index: 2; animation: windmilltopAn  15s linear infinite;
+   }
+ @keyframes windmilltopAn {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+.clgj_top .windmill_top image{width: 100%;height: 100%;}
+.clgj_top .windmill .line{width: 4rpx;height: 80rpx;float: left;position: relative;left: 50%;top: -64rpx; margin-left: -2rpx;background: #e5e5e5;overflow: hidden;}
+.clgj_top .windmill .line .span1{width: 2rpx;height: 100%;float: left;background: #e5e5e5;}
+.clgj_top .windmill .line .span1:last-child{background: #fff;}
+/*风车2 */
+.clgj_top .windmill2{left: 965rpx;}
+/*路灯*/
+.clgj_top .lamp{height: 64rpx;position: absolute;left: 450rpx;top: 122rpx;z-index: 1;}
+.clgj_top .lamp .red{width: 8rpx;height: 8rpx;position: absolute;left: 12rpx;top: 2rpx; background: #96290e;border-radius: 100%;
+   animation:redAn 14s linear;}
+@keyframes redAn{
+	0%{
+		background: #ff0000;box-shadow: 0 0 20rpx #ff0000;
+	}
+	10%{
+		background: #ff0000;box-shadow: 0 0 20rpx #ff0000;
+	}
+	11%{
+		background: #96290e;box-shadow: 0 0 0 #96290e;
+	}
+	100%{
+		background: #96290e;box-shadow: 0 0 0 #96290e;
+	}
+}   
+.clgj_top .lamp .yellow{width: 8rpx;height: 8rpx;position: absolute;left: 12rpx;top: 11rpx; background: #b5a50f;border-radius: 100%;
+  animation:yellowAn 14s linear;}
+ @keyframes yellowAn{
+	0%{
+		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
+	}
+	14%{
+		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
+	}
+	15%{
+		background: #ffe600;box-shadow: 0 0 10px #ffe600;
+	}
+	20%{
+		background: #ffe600;box-shadow: 0 0 10px #ffe600;
+	}	
+	23%{
+		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
+	}
+	100%{
+		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
+	}
+}    
+.clgj_top .lamp .green{width: 8rpx;height: 8rpx;position: absolute;left: 12rpx;top: 20rpx; background: #6fff00;border-radius: 100%;
+   animation:greenAn 14s linear;}
+@keyframes greenAn{
+	0%{
+		background: #569128;box-shadow: 0 0 0 #569128;
+	}
+	25%{
+		background: #569128;box-shadow: 0 0 0 #569128;
+	}
+	26%{
+		background: #6fff00;box-shadow: 0 0 0 #6fff00;
+	}	
+	100%{
+		background: #6fff00;box-shadow: 0 0 0 #6fff00;
+	}
+}    
+
+/*波纹*/
+.ripple{width: 6000rpx;height: 35rpx;float: left;position: relative;left: 0;top: 0;background: #00b1f9;overflow: hidden;}
+.ripple image{width: 100%;position: absolute;left: 0;top: 0;}
+.ripple1{width: 3000rpx;height: 35rpx;position: relative;top: 0;animation: ripple1An 20s linear infinite;display: inline-block;}
+   @keyframes ripple1An {
+  	0%{
+		left: 0;
+	}
+	100%{
+		left: -3000rpx;
+	} 
+}     
