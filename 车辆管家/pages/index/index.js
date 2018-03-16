@@ -51,6 +51,7 @@ Page({
           }
         );
       }
+
     }.bind(this), 200)
 
     // 显示
@@ -62,6 +63,7 @@ Page({
       );
     }
   } ,
+ 
   //添加车辆
   addCar:function()
   {
@@ -180,5 +182,8 @@ Page({
       hasUserInfo: true
     })
   },
-  
+  // 关闭功能
+  del: function () {
+    this.util('close')
+  }
 })

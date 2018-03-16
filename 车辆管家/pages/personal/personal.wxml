@@ -10,14 +10,10 @@
             <image mode='widthFix' src="/images/logon_ripple1.png"></image>
             <image mode='widthFix' src="/images/logon_ripple2.png"></image>
 					</view>
-					<view class="logon_ripple2">
+			  <view class="logon_ripple1">
             <image mode='widthFix' src="/images/logon_ripple1.png"></image>
             <image mode='widthFix' src="/images/logon_ripple2.png"></image>
-					</view> 
-          	<view class="logon_ripple3">
-            <image mode='widthFix' src="/images/logon_ripple1.png"></image>
-            <image mode='widthFix' src="/images/logon_ripple2.png"></image>
-					</view> 
+					</view>
           </view>
 		
 			</view>

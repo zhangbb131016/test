@@ -37,13 +37,13 @@
  </view>
   </view>
 
-<!-- <view class="btn" bindtap="powerDrawer" data-statu="open">button</view> -->
-<!--mask-->
-<!-- <view class="drawer_screen" catchtap="powerDrawer" wx:if="{{showModalStatus}}"></view>  -->
-<!--content-->
 <!--使用animation属性指定需要执行的动画-->
 <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
 <view class='drawer_box_main'>
+<view class='text_w'>
+<view class='text_w_i_w'>
+<view class='text_w_i'>
+<text class='text_head'>温馨提示</text>
  <text>1、本平台仅支持小型车辆使用车主驾驶证处理非现场交通违法记录的情形。</text> 
  <text>2、本平台仅可处理注册地为吉林省内的机动车，适用简易程序处理（罚款不超过200元）的非现场交通违法记录，其他记录须到违法发生地或车辆注册地交通违法处理窗口处理。</text> 
  <text>3、对于车主驾驶证累积记分将超过12分（含12分）的非现场交通违法记录，须到违法发生地或车辆注册地交通违法处理窗口处理。</text> 
@@ -55,7 +55,11 @@
 </text>
 <view class="btn_ok" catchtap="close">确定</view> 
 </view>
- 
+</view>
+</view>
+ <image mode='widthFix' src='/images/del1.png' class='del' bindtap="del" ></image> 
+</view>
+
 </view>
 
 </view>
