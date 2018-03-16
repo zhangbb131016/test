@@ -2,10 +2,10 @@
 .clgj_top image{height: 100%;}
 /*建筑剪影*/
 .clgj_top .jzjy{width: 1500rpx;height: 220rpx;position: relative;left: 0;top: 0;}
-.clgj_top .jzjy .image1{width: 750rpx; position: relative;animation:jzjy1An 60s linear 4s infinite;
+.clgj_top .jzjy .image1{width: 750rpx; position: relative;animation:jzjy1An 60s linear infinite;
 }   
 .clgj_top .jzjy .image2{width: 750rpx; position:relative;
-animation:jzjy1An 60s linear 4s infinite;
+animation:jzjy1An 60s linear infinite;
 }  
 @keyframes jzjy1An{
 	from{
@@ -35,7 +35,7 @@ animation:jzjy1An 60s linear 4s infinite;
 }
 /*背景  */
 .backdrop_ww{width: 4000rpx;height: 288rpx;position: absolute;left: 0;top: 30rpx;}
-.backdrop_w{width: 2000rpx;position: relative;animation:backdrop_wAn 24s linear 4s infinite;display: inline-block;}
+.backdrop_w{width: 2000rpx;position: relative;animation:backdrop_wAn 24s linear infinite;display: inline-block;}
   @keyframes backdrop_wAn{
 	0%{
    left: 0;
@@ -65,62 +65,6 @@ animation:jzjy1An 60s linear 4s infinite;
 .clgj_top .windmill .line .span1:last-child{background: #fff;}
 /*风车2 */
 .clgj_top .windmill2{left: 965rpx;}
-/*路灯*/
-.clgj_top .lamp{height: 64rpx;position: absolute;left: 450rpx;top: 122rpx;z-index: 1;}
-.clgj_top .lamp .red{width: 8rpx;height: 8rpx;position: absolute;left: 12rpx;top: 2rpx; background: #96290e;border-radius: 100%;
-   animation:redAn 14s linear;}
-@keyframes redAn{
-	0%{
-		background: #ff0000;box-shadow: 0 0 20rpx #ff0000;
-	}
-	10%{
-		background: #ff0000;box-shadow: 0 0 20rpx #ff0000;
-	}
-	11%{
-		background: #96290e;box-shadow: 0 0 0 #96290e;
-	}
-	100%{
-		background: #96290e;box-shadow: 0 0 0 #96290e;
-	}
-}   
-.clgj_top .lamp .yellow{width: 8rpx;height: 8rpx;position: absolute;left: 12rpx;top: 11rpx; background: #b5a50f;border-radius: 100%;
-  animation:yellowAn 14s linear;}
- @keyframes yellowAn{
-	0%{
-		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
-	}
-	14%{
-		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
-	}
-	15%{
-		background: #ffe600;box-shadow: 0 0 10px #ffe600;
-	}
-	20%{
-		background: #ffe600;box-shadow: 0 0 10px #ffe600;
-	}	
-	23%{
-		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
-	}
-	100%{
-		background: #b5a50f;box-shadow: 0 0 0 #b5a50f;
-	}
-}    
-.clgj_top .lamp .green{width: 8rpx;height: 8rpx;position: absolute;left: 12rpx;top: 20rpx; background: #6fff00;border-radius: 100%;
-   animation:greenAn 14s linear;}
-@keyframes greenAn{
-	0%{
-		background: #569128;box-shadow: 0 0 0 #569128;
-	}
-	25%{
-		background: #569128;box-shadow: 0 0 0 #569128;
-	}
-	26%{
-		background: #6fff00;box-shadow: 0 0 0 #6fff00;
-	}	
-	100%{
-		background: #6fff00;box-shadow: 0 0 0 #6fff00;
-	}
-}    
 
 /*波纹*/
 .ripple{width: 6000rpx;height: 35rpx;float: left;position: relative;left: 0;top: 0;background: #00b1f9;overflow: hidden;}
